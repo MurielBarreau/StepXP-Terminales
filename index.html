@@ -58,8 +58,8 @@ h2{font-family:Inter,system-ui,sans-serif;font-size:18px;font-weight:700;letter-
 .ctl{display:flex;gap:8px}.ctl button{flex:1;padding:15px 0;border-radius:10px;border:1px solid var(--ln);background:var(--c2);color:var(--t);font-family:Inter,system-ui,sans-serif;font-size:15px;font-weight:700;cursor:pointer}.ctl .go{background:var(--cy);color:var(--bg);border-color:var(--cy)}
 .dim{font-size:11px;color:var(--d)}
 .ft{text-align:center;font-size:11px;color:var(--d);margin:34px 0 0}
-.nav{position:fixed;left:0;right:0;bottom:0;z-index:9;background:rgba(2,24,73,.94);backdrop-filter:blur(8px);border-top:1px solid var(--ln);display:grid;grid-template-columns:repeat(4,1fr);max-width:460px;margin:0 auto;padding-bottom:env(safe-area-inset-bottom)}
-.nav button{background:none;border:0;color:var(--d);padding:9px 2px 8px;font-size:10.5px;line-height:1.15;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.nav{position:fixed;left:0;right:0;bottom:0;z-index:9;background:rgba(2,24,73,.94);backdrop-filter:blur(8px);border-top:1px solid var(--ln);display:grid;grid-template-columns:repeat(5,1fr);max-width:460px;margin:0 auto;padding-bottom:env(safe-area-inset-bottom)}
+.nav button{min-width:0;background:none;border:0;color:var(--d);padding:9px 2px 8px;font-size:10.5px;line-height:1.15;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
 .nav svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.nav button.on{color:var(--cy);font-weight:600}
 @media(prefers-reduced-motion:reduce){.orb.on,.sm.pulse{animation:none}}
 .orb{background:linear-gradient(to top,rgba(76,201,240,.55) var(--lvl,0%),transparent var(--lvl,0%)),radial-gradient(circle at 32% 28%,rgba(255,255,255,.6),rgba(120,170,255,.25) 35%,rgba(6,40,120,.95) 78%)}
@@ -260,51 +260,77 @@ input,select,textarea,.ta,.in2{font-size:16px}
 .rpe{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .rpe .card{min-width:0}.rpe .mb{padding:8px 10px}.rpe .mb h3{font-size:14px!important;letter-spacing:.03em}.rpe .in{padding:10px}
 .rpe .big{font-size:22px!important}.rpe .rt{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
-.m3{border-left:5px solid var(--mc,#9DB5FF);background:rgba(157,181,255,.07);border-radius:10px;padding:10px 12px;margin:8px 0}
-.m3 b{display:block;font-size:15px}.m3 .z3{font-size:12px;color:var(--d);margin:2px 0}.m3 p{margin:3px 0;font-size:13px;line-height:1.4}
+.mdxl{text-align:left;margin:18px 0 4px;border-top:1px solid rgba(157,181,255,.25);padding-top:12px}
+.mdxl>summary{cursor:pointer;list-style:none;color:#9DB5FF;text-decoration:underline;font-size:15px;font-weight:600}
+.mdxl>summary::-webkit-details-marker{display:none}
+.mdxl>summary::after{content:" ▾";text-decoration:none;display:inline-block}
+.mdxl[open]>summary::after{content:" ▴"}
+.mdxv{margin:2px 0 6px;font-size:15px;font-weight:700}
+.mdxu{margin:4px 0 10px;padding-left:18px;font-size:13px;line-height:1.45}.mdxu li{margin:4px 0}
 .tpl{font-size:12px;color:var(--d);margin:8px 0 0}.tpl b{color:var(--t)}
+/* === Parcours guidé === */
+#flow .accw{display:none}.stph{display:none!important}#flow #sv>.sh3:first-child{display:none}
+#kpb,#p4 .acch.static,#p6 .acch.static{display:none}
+.gdrail{display:flex;gap:6px;margin:0 0 12px}
+.gdrail button{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 2px;border-radius:12px;border:1px solid var(--ln);background:rgba(157,181,255,.08);color:#9DB5FF;font-size:10px;line-height:1.1}
+.gdrail button b{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;border:1px solid currentColor}
+.gdrail button.on{background:#9DB5FF;color:#021849;border-color:#9DB5FF;font-weight:700}.gdrail button.on b{background:#021849;color:#fff;border-color:#021849}
+.gdrail button.done{color:#00BF63;border-color:rgba(0,191,99,.5)}
+.gdstep{font-size:12px;color:var(--d);margin:0 0 2px}.gdtitle{font-size:18px;font-weight:700;margin:0 0 10px}
+.gdnav{display:flex;gap:8px;margin-top:14px}.gdnav .btn{flex:1}
+.gdtile{display:block;width:100%;text-align:left;border-radius:14px;padding:12px 14px;margin:0 0 10px;border:2px solid rgba(157,181,255,.25);color:inherit;font:inherit}
+.gdtile.sel{border-color:var(--c)}
+.gdtt{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:700}
+.gddot{width:11px;height:11px;border-radius:50%}
+.gdbg{margin-left:auto;font-size:11px;font-weight:600;background:var(--c);color:#021849;border-radius:99px;padding:2px 10px}
+.gdts{display:block;font-size:12px;color:var(--d);margin:2px 0 0 19px;font-weight:400}
+.gdsw{margin:0 0 14px}
 </style></head><body><div class="app">
 <div class="mini" id="mini" hidden><span id="mph"></span><b id="mtm">00:00</b><span id="mser"></span></div>
 <div class="hd"><p class="ey">Savoir s'entraîner physiquement - Terminales</p><h1>StepXP</h1></div>
 
 <div class="pane on" id="p1">
 <section class="sec sA"><h2>Ma progression</h2><div class="con" id="con"></div><div class="card" id="od"></div></section>
-<section class="sec sC"><h2>Mon carnet d'entraînement</h2><div class="accw"><button type="button" class="acch" id="khb" aria-expanded="false"><span>Mes séances et mes XP</span><i>▾</i></button><div class="kbody" id="khbody" hidden><div class="card" id="hist"></div></div></div><div class="card" id="inst"><h3>Utiliser l'appli sans connexion</h3><p>J'ajoute l'appli à mon écran d'accueil : sur iPhone, Partager puis « Sur l'écran d'accueil » ; sur Android, menu ⋮ puis « Installer l'application ». Ainsi, elle s'ouvre sans réseau et mon carnet reste mieux protégé.</p><button class="btn" id="ib" style="display:none">Installer l'appli</button></div></section>
+<section class="sec sC"><h2>Mon carnet d'entraînement</h2><div class="accw"><button type="button" class="acch" id="khb" aria-expanded="false"><span>Mes séances et mes XP</span><i>▾</i></button><div class="kbody" id="khbody" hidden><div class="card" id="hist"></div></div></div><h3 class="sh3" style="margin:16px 0 8px">Mes entraînements enregistrés</h3><div class="tip"><span class="ti">i</span><div>J'enregistre d'abord ma séance du jour (onglet Steppeur ou Coach), puis j'envoie : seul ce qui est enregistré part dans le PDF.<br>Mon carnet de coach doit être entièrement rempli pour que le PDF soit envoyé.</div></div><div id="lst"></div><div class="card" id="inst"><h3>Utiliser l'appli sans connexion</h3><p>J'ajoute l'appli à mon écran d'accueil : sur iPhone, Partager puis « Sur l'écran d'accueil » ; sur Android, menu ⋮ puis « Installer l'application ». Ainsi, elle s'ouvre sans réseau et mon carnet reste mieux protégé.</p><button class="btn" id="ib" style="display:none">Installer l'appli</button></div></section>
 </div>
 
 <div class="pane" id="p2">
+<div class="seg gdsw"><button class="on" data-sw="p2">Quantitatives</button><button data-sw="p3">Qualitatives</button></div>
 <section class="sec sC"><h2>Orbe du Flow énergétique<small class="h2s">Zones de FC</small></h2>
 <div class="fr"><div class="f"><label>Âge (ans)</label><input type="number" id="age" min="10" max="25"></div><div class="f"><label>FC repos (bpm)</label><input type="number" id="fc" min="35" max="110"></div></div>
 <div class="seg" id="gen"><button data-g="F">Fille · 226 − âge</button><button data-g="G">Garçon · 220 − âge</button></div>
 <div class="zb" id="zb"></div><div class="card" id="zs"></div>
 <p class="dim">FC cible = FC repos + % × (FC max − FC repos)</p>
-<h3 class="sh3">Mes 3 modes de série</h3><div id="m3"></div>
 </section><section class="sec sB"><h2>Orbe des ressentis<small class="h2s">Perception de l'effort</small></h2><div class="rpe" id="rpe"></div></section>
 </div>
 
 <div class="pane" id="p3">
+<div class="seg gdsw"><button data-sw="p2">Quantitatives</button><button class="on" data-sw="p3">Qualitatives</button></div>
 <section class="sec sA"><h2>Orbe de la technique</h2><div class="card" id="tq"></div></section>
 <section class="sec sB"><h2>Orbe des ressentis<small class="h2s">Perception de l'effort</small></h2>
 <div id="rc"></div></section>
 </div>
 
 <div class="pane" id="p4">
+<div id="railC"></div>
 <div class="accw"><button type="button" class="acch" id="kpb" aria-expanded="false"><span>Je prépare</span><i>▾</i></button><div class="kbody" id="kpbody" hidden>
-<div class="card hero" id="mhero"><button type="button" class="hbtn" id="mhb" aria-expanded="false"><span>Je booste les progrès de mon steppeur</span><i>▾</i></button><div class="hbody" id="mhbody" hidden><div class="mrow" style="--mc:#00BF63"><b>Soutenir</b><span>Je soutiens psychologiquement mon steppeur, avant, pendant et après ses séries.</span></div><div class="mrow" style="--mc:#4CC9F0"><b>Chronométrer</b><span>Je chronomètre ses séries et ses récupérations avec des annonces fiables, grâce au chrono ci-dessous.</span></div><div class="mrow" style="--mc:#FF914D"><b>Faire des retours précis</b><span>Je fais des retours sur sa motricité, ses indices corporels et ventilatoires.</span></div><p class="dim" style="margin:10px 0 0">Je n'enregistre aucun nom ni aucune donnée sur mon steppeur.</p></div></div>
-<h3 style="margin:18px 0 6px">Les séries de mon steppeur</h3><p class="dim">Je règle ici les séries choisies par mon steppeur. Je peux ajouter ou retirer une série à tout moment : mes observations suivent tout de suite, le chrono en cours prend la nouvelle liste à sa remise à zéro.</p><div id="cser"></div></div></div>
+<p class="dim">Mon steppeur choisit un mode d'entraînement, ou en combine deux. Je règle ici son plan : mes observations suivent tout de suite, le chrono en cours prend le nouveau plan à sa remise à zéro.</p><div id="cser"></div></div></div>
 <div class="accw"><div class="acch static"><span>Je chronomètre</span></div><div class="kbody">
 <div class="seg wrap" id="cm"></div>
 <div class="ck" id="ck"><div class="ckt"><span class="chp" id="cks"></span><span class="chp" id="ckr"></span></div><div class="ph" id="ph"></div><div class="tm" id="tm">00:00</div><div class="pbar"><i id="pbi"></i></div><div class="tg" id="tg"></div><div class="dim" id="ct"></div><div class="sm" id="co" style="display:none"></div><div id="pr" hidden></div></div>
 <div class="ctl"><button class="go" id="go">Démarrer</button><button id="rs">Reset</button></div>
 <p class="dim" id="seq" style="margin-top:14px"></p>
 <div class="card fcsig" id="fcsig" style="text-align:center;border-width:3px;margin-top:16px"><button type="button" class="fch2" id="kfb" aria-expanded="true"><span>Pulsations du steppeur</span><i>▾</i></button><div id="kfbody"><p class="dim">À la fin de la série, je lance les 15 secondes : mon steppeur compte ses pulsations entre les deux bips.</p><div class="big" id="ft">15</div><button class="btn cta" id="fgo">Signaler les 15 s de FC</button></div></div></div></div>
-<div id="slotC"></div>
-<button type="button" class="btn" id="tocarnet" style="width:100%;margin-top:4px">Voir mon carnet et mon profil</button>
+<div id="slotC"></div><div id="navC"></div>
+<button type="button" class="btn" id="tocarnet" style="width:100%;margin-top:4px">Voir mon carnet d'entraînement</button>
+</div>
+<div class="pane" id="p6">
+<div class="tip" style="margin-bottom:12px"><span class="ti">i</span><div>Le chrono suit le plan de mon steppeur. Il continue de tourner si je change d'onglet.<br><button type="button" id="p6edit" style="background:none;border:0;color:#9DB5FF;text-decoration:underline;padding:4px 0 0;font:inherit;cursor:pointer">Choisir ou changer le mode (onglet Coach)</button></div></div><div id="p6box"></div>
 </div>
 <div class="pane" id="p5">
 <section class="sec sA"><h2>Mon profil</h2><div class="fr"><div class="f"><label>Prénom</label><input id="pn" maxlength="40" autocomplete="given-name" style="font-size:18px"></div><div class="f"><label>Nom</label><input id="nm" maxlength="40" autocomplete="family-name" style="font-size:18px"></div></div><p class="dim">Mon prénom et mon nom apparaissent sur les PDF que j'envoie à mon enseignant(e). Ils restent sur mon téléphone.</p></section>
-<section class="sec sD"><h2>Je m'entraîne</h2><div id="slotT"><div id="flow"><div class="accw"><button type="button" class="acch" data-s="1" aria-expanded="false"><span>Préparer</span><i>▾</i></button></div><div class="accw"><button type="button" class="acch" data-s="2" aria-expanded="false"><span>M'entraîner</span><i>▾</i></button></div><div class="accw"><button type="button" class="acch" data-s="3" aria-expanded="false"><span>Faire le bilan</span><i>▾</i></button></div><div id="sv" hidden></div></div></div></section>
-<section class="sec sC"><h2>Carnet de suivi d'entraînement</h2><div class="tip"><span class="ti">i</span><div>J'enregistre d'abord ma séance du jour (onglet Steppeur ou Coach), puis j'envoie : seul ce qui est enregistré part dans le PDF.<br>Mon carnet de coach doit être entièrement rempli pour que le PDF soit envoyé.</div></div><div id="lst"></div></section>
+<section class="sec sD"><h2>Je m'entraîne</h2><div id="railT"></div><div id="slotT"><div id="flow"><div class="accw"><button type="button" class="acch" data-s="1" aria-expanded="false"><span>Préparer</span><i>▾</i></button></div><div class="accw"><button type="button" class="acch" data-s="2" aria-expanded="false"><span>M'entraîner</span><i>▾</i></button></div><div class="accw"><button type="button" class="acch" data-s="3" aria-expanded="false"><span>Faire le bilan</span><i>▾</i></button></div><div id="sv" hidden></div></div></div><div id="navT"></div></section>
+
 </div>
 <div class="ibub" id="ibub" hidden role="dialog" aria-label="Installer l'application"><span id="ibt" style="flex:1"></span><button class="btn" id="ibi" style="display:none">Installer</button><button class="x" id="ibx" aria-label="Plus tard">×</button></div>
 <div class="ts" id="ts" role="status"></div>
@@ -312,10 +338,10 @@ input,select,textarea,.ta,.in2{font-size:16px}
 </div>
 <nav class="nav" id="nav">
 <button class="on" data-p="p1"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>StepXP</button>
-<button data-p="p2"><svg viewBox="0 0 24 24"><path d="M5 20V10M12 20V4M19 20v-7"/></svg>Mes cibles quantitatives</button>
-<button data-p="p3"><svg viewBox="0 0 24 24"><path d="M5 7l2 2 3-3M5 15l2 2 3-3M13 8h6M13 16h6"/></svg>Mes cibles qualitatives</button>
+<button data-p="p2"><svg viewBox="0 0 24 24"><path d="M5 20V10M12 20V4M19 20v-7"/></svg>Mes cibles</button>
 <button data-p="p5"><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="3"/><path d="M6 21v-4l3-3h6l3 3v4M9 14l-1 7M15 14l1 7"/></svg>Steppeur</button>
-<button data-p="p4"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="7"/><path d="M12 9v4l3 2M9 3h6"/></svg>Coach</button></nav>
+<button data-p="p4"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-1a5 5 0 0 1 10 0v1"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 14a4 4 0 0 1 5.5 3.7V20"/></svg>Coach</button>
+<button data-p="p6"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="7"/><path d="M12 9v4l3 2M9 3h6"/></svg>Chrono</button></nav>
 <script>
 const OG="linear-gradient(165deg,rgba(157,181,255,.32),#0B2766 78%)";
 const $=id=>document.getElementById(id),Q=s=>document.querySelectorAll(s);
@@ -325,7 +351,7 @@ let S={age:16,fc:70,g:"F"};try{Object.assign(S,JSON.parse(localStorage.getItem("
 const save=()=>{try{localStorage.setItem("stepxpt",JSON.stringify(S))}catch(e){}};
 const fmax=()=>(S.g==="F"?226:220)-(+S.age||0),res=()=>Math.max(fmax()-(+S.fc||0),0),bpm=p=>Math.round((+S.fc||0)+res()*p/100),rng=k=>bpm(ZC[k][2])+"–"+bpm(ZC[k][3]);
 const pips=(n,c)=>`<span class="pips" role="img" aria-label="Intensité ${n} sur 5">${[1,2,3,4,5].map(i=>`<i style="height:${5+i*3}px;${i<=n?"background:"+c:""}"></i>`).join("")}</span>`;
-function tab(p){Q("#nav button").forEach(x=>x.classList.toggle("on",x.dataset.p===p));Q(".pane").forEach(x=>x.classList.toggle("on",x.id===p));if(p==="p4")setRole("coach");else if(p==="p5")setRole("train");miniUpd();scrollTo(0,0)}
+function tab(p){Q("#nav button").forEach(x=>x.classList.toggle("on",x.dataset.p===p||(p==="p3"&&x.dataset.p==="p2")));Q(".pane").forEach(x=>x.classList.toggle("on",x.id===p));if(p==="p4")setRole("coach");else if(p==="p5")setRole("train");ckVis=(p==="p6");miniUpd();scrollTo(0,0)}
 Q("#nav button").forEach(b=>b.onclick=()=>tab(b.dataset.p));
 
 /* ORBES */
@@ -355,10 +381,19 @@ function modes(){if(!$("mc"))return;$("mc").innerHTML=M.map((m,i)=>{return `<div
 
 /* QUANTITATIF */
 function stats(){}
-const M3=[{n:"CHILL",c:"#00BF63",z:"Zone 2",fc:()=>rng("chill"),nat:"modéré et prolongé",ex:"2×18' R=4'"},{n:"COMBO",c:"#FFCC00",z:"Zone 3",fc:()=>rng("combo"),nat:"long et soutenu",ex:"4×6' R=3'"},{n:"TURBO",c:"#FF914D",z:"Zones 4 / 5",fc:()=>bpm(80)+"–"+bpm(100),nat:"bref et intense",ex:"3×(8×30''/30'') R=4'"}];
-function m3r(){if($("m3"))$("m3").innerHTML=M3.map(x=>`<div class="m3" style="--mc:${x.c}"><b style="color:${x.c}">${x.n}</b><div class="z3">${x.z} · ${x.fc()} bpm</div><p><b style="font-size:13px;display:inline">Nature de l'effort :</b> ${x.nat}</p><p><b style="font-size:13px;display:inline">Exemple de série :</b> ${x.ex}</p></div>`).join("")}
+const MODES=[
+{n:"Chill",k:"chill",c:"#00BF63",z:"Zone 2",fc:()=>rng("chill"),nat:"modéré et prolongé",ex:"2×18' R=4'",
+ q:"S'engager dans un effort prolongé et modéré",v:"Je veux construire mon endurance et améliorer ma récupération.",
+ l:[["J'améliore mon endurance de base"," : mon cœur devient plus efficace et mes muscles apprennent à mieux utiliser l'oxygène."],["Je favorise la récupération active"," : mon corps recharge plus vite entre les séances intenses."],["Je brûle des graisses comme source d'énergie.",""],["Je pose les fondations pour progresser dans les zones plus hautes.",""]],e:"Effort facile"},
+{n:"Combo",k:"combo",c:"#FFCC00",z:"Zone 3",fc:()=>rng("combo"),nat:"long et soutenu",ex:"4×6' R=2'30",
+ q:"S'engager dans des efforts longs et soutenus",v:"Je veux muscler mon endurance et mon mental.",
+ l:[["Je développe ma capacité aérobie"," : j'augmente ma réserve d'énergie utilisable à effort soutenu."],["Je renforce mon mental"," à gérer un effort qui pique un peu mais reste maîtrisable."],["J'améliore mon seuil anaérobie"," : je retarde l'arrivée de la fatigue. C'est la zone clé du progrès, car j'apprends à « tenir » quand ça devient sérieux."]],e:"Effort soutenu"},
+{n:"Turbo",k:"turbo",c:"#FF914D",bg:"linear-gradient(90deg,#FF914D,#A8040B)",z:"Zones 4 / 5",fc:()=>bpm(80)+"–"+bpm(100),nat:"bref et intense",ex:"3×(8×30''/30'') R=4'",
+ q:"S'engager dans des efforts brefs et intenses",v:"Je veux repousser mes limites et booster ma puissance et ma vitesse.",
+ l:[["Je développe ma puissance aérobie",", c'est-à-dire ma capacité à utiliser mon oxygène à fond."],["J'augmente ma vitesse, mon explosivité, ma force de sprint.",""],["J'améliore ma tolérance à l'acide lactique"," : je supporte mieux les efforts qui brûlent."],["Je booste ma récupération"," après des efforts intenses."]],e:"Effort intense et très intense"}];
+const modesHtml=()=>`<details class="mdxl"><summary>les modes d'entraînement</summary>${MODES.map(x=>`<div class="card mc" style="margin:12px 0;border-color:${x.c};background:${MBG[x.k]}"><div class="mb" style="background:${x.bg||x.c}"><h3>${x.n.toUpperCase()}</h3></div><div class="in"><div class="dim" style="font-style:italic;margin-bottom:4px">« ${x.q} »</div><p class="mdxv" style="color:${x.c}">${x.v}</p><ul class="mdxu">${x.l.map(i=>`<li><b>${i[0]}</b>${i[1]}</li>`).join("")}</ul><div class="row" style="--mc:${x.c}"><b>Zone</b><span>${x.z} · ${x.fc()} bpm</span></div><div class="row" style="--mc:${x.c}"><b>Nature de l'effort</b><span>${x.nat}</span></div><div class="row" style="--mc:${x.c}"><b>Exemple de série</b><span>${x.ex}</span></div><div class="row" style="--mc:${x.c}"><b>Niveau d'effort</b><span>${x.e}</span></div></div></div>`).join("")}</details>`;
 function zones(){$("zb").innerHTML=Z.map(z=>`<div style="background:${z[4]}"></div>`).join("");
- $("zs").innerHTML=Z.map(z=>`<div class="z">${pips(z[6],z[5])}<div><b style="color:${z[5]}">${z[1]}</b><span>Zone ${z[6]} · ${z[2]}% – ${z[3]}%</span></div><em>${rng(z[0])}<small>bpm</small></em></div>`).join("");m3r()}
+ $("zs").innerHTML=Z.map(z=>`<div class="z">${pips(z[6],z[5])}<div><b style="color:${z[5]}">${z[1]}</b><span>Zone ${z[6]} · ${z[2]}% – ${z[3]}%</span></div><em>${rng(z[0])}<small>bpm</small></em></div>`).join("")}
 $("rpe").innerHTML=M.map((m,i)=>`<div class="card mc" style="margin:0;border-color:${m.c};background:${MBG[m.k]}"><div class="mb" style="background:${m.bg||m.c}"><h3>${m.n}</h3></div><div class="in"><div class="rt"><div class="big" style="color:${m.c};margin:0">${m.rpe}</div>${pips(m.p,m.c)}</div><div class="dim" style="margin-top:6px">Perception de l'effort</div></div></div>`).join("");
 function all(){beat();$("age").value=S.age;$("fc").value=S.fc;Q("#gen button").forEach(b=>b.classList.toggle("on",b.dataset.g===S.g));stats();zones();modes();rview();show()}
 $("age").oninput=e=>{S.age=e.target.value;save();all()};$("fc").oninput=e=>{S.fc=e.target.value;save();all()};
@@ -376,23 +411,23 @@ function rview(){$("rc").innerHTML=["chill","combo","turbo"].map((k,i)=>{const m
 /* CHRONO */
 let mode="all",steps=[],idx=0,left=0,end=0,run=false,tick=null,lastS=-1,ac=null,wl=null;
 function build(m){steps=[];const P=C.coach.plan,ser=k=>{const p=P[k],kk=p.k||1,RR=Math.round((+p.R||0)*60),mm=mk(p.m),sn=k+1;
-  if(mm==="turbo"){for(let b=1;b<=kk;b++){for(let r=1;r<=p.n;r++){const info="Série "+sn+" Turbo"+(kk>1?" · Bloc "+b+"/"+kk:"")+" · Répétition "+r+"/"+p.n;steps.push({n:"TURBO",d:+p.w,z:"turbo",c:info,sn:sn,r:r,R:+p.n,lab:(kk>1?"BLOC "+b+"/"+kk+" · ":"")+"RÉP. "+r+"/"+p.n});if(r<p.n)steps.push({n:"RÉCUP",d:+p.r,c:info,sn:sn,r:r,R:+p.n,lab:(kk>1?"BLOC "+b+"/"+kk+" · ":"")+"RÉP. "+r+"/"+p.n})}
-    if(b<kk&&RR>0)steps.push({n:"RÉCUP",d:RR,c:"Récupération entre les blocs · "+String(p.R).replace(".",",")+" min",sn:sn,lab:"APRÈS LE BLOC "+b+"/"+kk})}}
-  else{for(let b=1;b<=kk;b++){steps.push({n:mm.toUpperCase(),d:Math.round(p.n*60),z:mm,c:"Série "+sn+" · "+p.m+" "+p.n+" min"+(kk>1?" · Répétition "+b+"/"+kk:""),sn:sn,lab:(kk>1?"RÉP. "+b+"/"+kk+" · ":"")+p.n+" MIN"});if(b<kk&&RR>0)steps.push({n:"RÉCUP",d:RR,c:"Récupération entre les répétitions · "+String(p.R).replace(".",",")+" min",sn:sn,lab:"APRÈS LA RÉP. "+b+"/"+kk})}}
-  if(p.g>0)steps.push({n:"RÉCUPÉRATION",d:Math.round(p.g*60),c:"Récupération · "+String(p.g).replace(".",",")+" min",sn:sn})};
+  if(mm==="turbo"){for(let b=1;b<=kk;b++){for(let r=1;r<=p.n;r++){const info=SL(k,P)+(kk>1?" · Bloc "+b+"/"+kk:"")+" · Répétition "+r+"/"+p.n;steps.push({n:"TURBO",d:+p.w,z:"turbo",c:info,sn:sn,r:r,R:+p.n,lab:(kk>1?"BLOC "+b+"/"+kk+" · ":"")+"RÉP. "+r+"/"+p.n});if(r<p.n)steps.push({n:"RÉCUP",d:+p.r,c:info,sn:sn,r:r,R:+p.n,lab:(kk>1?"BLOC "+b+"/"+kk+" · ":"")+"RÉP. "+r+"/"+p.n})}
+    if(b<kk&&RR>0)steps.push({n:"RÉCUP",d:RR,c:"Récupération entre les blocs · "+fM(p.R),sn:sn,lab:"APRÈS LE BLOC "+b+"/"+kk})}}
+  else{for(let b=1;b<=kk;b++){steps.push({n:mm.toUpperCase(),d:Math.round(p.n*60),z:mm,c:SL(k,P)+" · "+p.n+" min"+(kk>1?" · Répétition "+b+"/"+kk:""),sn:sn,lab:(kk>1?"RÉP. "+b+"/"+kk+" · ":"")+p.n+" MIN"});if(b<kk&&RR>0)steps.push({n:"RÉCUP",d:RR,c:"Récupération entre les répétitions · "+fM(p.R),sn:sn,lab:"APRÈS LA RÉP. "+b+"/"+kk})}}
+  if(p.g>0)steps.push({n:"RÉCUPÉRATION",d:Math.round(p.g*60),c:"Récupération · "+fM(p.g),sn:sn})};
  if(m==="all")P.forEach((_,k)=>ser(k));else if(P[+m])ser(+m);
- $("seq").innerHTML=(m==="all"?"Séries de mon steppeur :<br>":"")+(m==="all"?P.map((p,i)=>[p,i]):[[P[+m]||P[0],+m||0]]).map(x=>"Série "+(x[1]+1)+" · "+x[0].m+" : "+planTxt(x[0])).join("<br>")+(m==="all"?"<br><b>Durée totale : "+totMin(P)+" min</b>":"")}
+ $("seq").innerHTML=(m==="all"?"Plan de mon steppeur :<br>":"")+(m==="all"?P.map((p,i)=>[p,i]):[[P[+m]||P[0],+m||0]]).map(x=>SL(x[1],P)+" : "+planTxt(x[0])).join("<br>")+(m==="all"?"<br><b>Durée totale : "+totMin(P)+" min</b>":"")}
 const fmt=ms=>{const s=Math.max(0,Math.ceil(ms/1000));return String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0")};
 function ckBg(c){const k=$("ck");k.style.setProperty("--cc",c);k.style.borderColor=c;k.style.background="linear-gradient(180deg,"+hexA(c,.5)+" 0%,#050B1F 58%)";k.style.boxShadow="0 0 34px "+hexA(c,.4);$("ph").style.background=c;$("ph").style.color="#021849"}
 function fcSigBg(sn){const k=$("fcsig");if(!k)return;const pl=C.coach.plan[sn-1],c=pl?(MCOL[mk(pl.m)]||"#FF914D"):"#9DB5FF";k.style.borderColor=c;k.style.background="linear-gradient(165deg,"+hexA(c,.34)+",#0B2766 78%)";k.style.boxShadow="0 0 22px "+hexA(c,.28)}
 let ckVis=true;
-function miniUpd(){const m=$("mini");if(!m)return;const on=$("p4").classList.contains("on")&&!ckVis&&(run||left>0);m.hidden=!on;if(on){const st=steps[idx];$("mtm").textContent=$("tm").textContent;$("mph").textContent=st?st.n:"";$("mser").textContent=st?"SÉRIE "+st.sn+" / "+C.coach.plan.length:"";m.style.background=$("ck").style.borderColor||"#00BF63"}}
-function show(){fcSigBg(steps[idx]?steps[idx].sn:steps.length?steps[steps.length-1].sn:0);const st=steps[idx];if(!st&&!steps.length){$("ph").textContent="SÉRIE RETIRÉE";$("cks").textContent="";$("ckr").textContent="";$("pbi").style.width="0%";$("tm").textContent="--:--";$("tg").textContent="J'ajoute une série ci-dessus";$("ct").textContent="";$("pr").textContent="";ckBg("#9DB5FF");return}if(!st){$("ph").textContent="TERMINÉ";$("cks").textContent="";$("ckr").textContent="";$("pbi").style.width="100%";$("tm").textContent="00:00";$("tg").textContent="Bravo !";$("ct").textContent="";$("pr").textContent="";ckBg("#00BF63");$("co").classList.remove("pulse");return}
+function miniUpd(){const m=$("mini");if(!m)return;const on=!ckVis&&(run||left>0);m.hidden=!on;if(on){const st=steps[idx];$("mtm").textContent=$("tm").textContent;$("mph").textContent=st?st.n:"";$("mser").textContent=st?(C.coach.plan.length>1?"MODE "+st.sn+" / "+C.coach.plan.length:""):"";m.style.background=$("ck").style.borderColor||"#00BF63"}}
+function show(){fcSigBg(steps[idx]?steps[idx].sn:steps.length?steps[steps.length-1].sn:0);const st=steps[idx];if(!st&&!steps.length){$("ph").textContent="MODE RETIRÉ";$("cks").textContent="";$("ckr").textContent="";$("pbi").style.width="0%";$("tm").textContent="--:--";$("tg").textContent="Je choisis un mode dans l'onglet Coach";$("ct").textContent="";$("pr").textContent="";ckBg("#9DB5FF");return}if(!st){$("ph").textContent="TERMINÉ";$("cks").textContent="";$("ckr").textContent="";$("pbi").style.width="100%";$("tm").textContent="00:00";$("tg").textContent="Bravo !";$("ct").textContent="";$("pr").textContent="";ckBg("#00BF63");$("co").classList.remove("pulse");return}
  const c=MCOL[st.z]||"#4CC9F0";ckBg(c);$("ph").textContent=st.n;
  $("tm").textContent=fmt(run?end-Date.now():(left||st.d*1000));
  if(st.z)$("tg").innerHTML="";
  else{$("tg").textContent=st.z?"":"Je récupère";$("tg").style.color="var(--d)"}
- $("ct").textContent=st.c;$("pr").textContent="";{const tot=st.d*1000,rem=run?end-Date.now():(left||tot);$("pbi").style.width=Math.min(100,Math.max(0,(1-rem/tot)*100))+"%";$("cks").textContent="SÉRIE "+st.sn+" / "+C.coach.plan.length;$("ckr").textContent=st.lab||(st.d>=60?Math.round(st.d/6)/10+" MIN":st.d+" S")}$("co").classList.toggle("pulse",run&&!!st.z);miniUpd()}
+ $("ct").textContent=st.c;$("pr").textContent="";{const tot=st.d*1000,rem=run?end-Date.now():(left||tot);$("pbi").style.width=Math.min(100,Math.max(0,(1-rem/tot)*100))+"%";$("cks").textContent=C.coach.plan.length>1?"MODE "+st.sn+" / "+C.coach.plan.length:"MON ENTRAÎNEMENT";$("ckr").textContent=st.lab||(st.d>=60?Math.round(st.d/6)/10+" MIN":st.d+" S")}$("co").classList.toggle("pulse",run&&!!st.z);miniUpd()}
 function beep(f,ms){try{ac=ac||new(window.AudioContext||window.webkitAudioContext)();const o=ac.createOscillator(),g=ac.createGain();o.frequency.value=f;o.connect(g);g.connect(ac.destination);g.gain.value=.25;o.start();o.stop(ac.currentTime+ms/1000)}catch(e){}try{navigator.vibrate&&navigator.vibrate(ms)}catch(e){}}
 function stop(){run=false;clearInterval(tick);try{wl&&wl.release();wl=null}catch(e){}}
 function loop(){left=end-Date.now();
@@ -441,17 +476,16 @@ const dlf=f=>{const a=document.createElement("a");a.href=URL.createObjectURL(f);
 function savePDF(){if(needName())return;dlf(pdfFile())}
 async function sharePDF(){if(needName())return;const f=pdfFile();try{if(navigator.canShare&&navigator.canShare({files:[f]}))await navigator.share({files:[f],title:"Ma progression StepXP"});else{dlf(f);toast("PDF enregistré : je le joins à mon mail, WhatsApp ou SMS")}}catch(e){}}
 function hist(){const L=H.slice(-5).reverse().map(h=>`<div class="hr"><span>${String(h.d).replace(/[^0-9-]/g,"").slice(0,10)} · ${h.r==="coach"?"Rôle : Coach":h.r==="both"?"Entraînement + Coach":"Entraînement"}${h.r==="both"?`<br><small class="dim">Steppeur ${tsOf(h.x)} · Coach ${h.x.coop||0}</small>`:""}</span><b>+${tot(h.x)} XP</b></div>`).join("")||'<p class="dim">Aucun entraînement enregistré.</p>';
- $("hist").innerHTML=`<p class="dim">XP total : <b>${tot(XP)}</b> · entraînements : <b>${H.length}</b></p>${L}<div class="seg wrap" style="margin:12px 0 8px"><button id="sh" style="flex:1 1 100%;background:#4CC9F0;color:#021849;border-color:#4CC9F0">Envoyer mon carnet de suivi d'entraînement</button><button id="pf">Enregistrer en PDF</button></div><div class="seg"><button id="ex">Exporter</button><button id="rz">Tout effacer</button></div><p class="dim">Mes données restent sur mon téléphone : aucun compte, rien n'est envoyé automatiquement. Mon nom n'apparaît que sur les PDF que j'envoie. Je peux exporter une copie de mes données.</p>`;
+ $("hist").innerHTML=`<p class="dim">XP total : <b>${tot(XP)}</b> · entraînements : <b>${H.length}</b></p>${L}<div class="seg wrap" style="margin:12px 0 8px"><button id="pf" style="flex:1 1 100%;background:#4CC9F0;color:#021849;border-color:#4CC9F0;font-weight:700;padding:14px">Enregistrer en PDF</button><button id="sh" style="flex:1 1 100%">Envoyer mon carnet de suivi d'entraînement</button></div><div class="seg"><button id="rz">Tout effacer</button></div><p class="dim">Mes données restent sur mon téléphone : aucun compte, rien n'est envoyé automatiquement. Mon nom n'apparaît que sur les PDF que j'envoie.</p>`;
  $("sh").onclick=sendCarnet;$("pf").onclick=saveCarnet;
- $("ex").onclick=()=>{const b=new Blob([JSON.stringify({v:3,xp:XP,hist:H,seances:Sx,projet:PJ,profil:{pn:S.pn||"",nm:S.nm||""}})],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="stepxpt-progression.json";a.click()};
  $("rz").onclick=()=>{if(confirm("Effacer toute ma progression, mon carnet et mon projet sur cet appareil ?")){KEYS.forEach(k=>XP[k]=0);H=[];Sx=[];PJ=[];pjD=null;saveX();saveS();savePJ();savePD();C=newC();saveC();showReq=false;refresh();sview();refreshHrt()}}}
 const CN={flow:["Flow énergétique",["100 % de mes FC cible sont atteintes pour la série 1 Chill","100 % de mes FC cible sont atteintes pour la série 2 Turbo","100 % de mes FC cible sont atteintes pour la série 3 Turbo"]],tech:["Technique",[]],
 ress:["Ressentis",["J'ai atteint la cible des ressentis (perception de l'effort, ressenti psychologique, musculaire, respiratoire, corporel) pour la série 1 Chill","J'ai atteint la cible des ressentis (perception de l'effort, ressenti psychologique, musculaire, respiratoire, corporel) pour la série 2 Turbo","J'ai atteint la cible des ressentis (perception de l'effort, ressenti psychologique, musculaire, respiratoire, corporel) pour la série 3 Turbo","J'ai décrit précisément mes ressentis pour les modes Chill et Turbo"]],
 strat:["Stratégie",["Les paramètres choisis sur la série 1 Chill, série 2 Turbo, série 3 Turbo m'ont permis d'atteindre ma cible de FC","Les paramètres choisis sur la série 1 Chill, série 2 Turbo, série 3 Turbo m'ont permis d'atteindre ma cible de motricité","Les paramètres choisis sur la série 1 Chill, série 2 Turbo, série 3 Turbo m'ont permis d'atteindre ma cible de ressentis"]],
 coop:["Coopération (à valider avec mon steppeur)",["J'ai soutenu psychologiquement mon steppeur","J'ai chronométré séries et récupérations de façon fiable, avec annonces","J'ai fait un retour précis sur les 5 indicateurs"]]};
-const sl=()=>C.plan.map((p,i)=>"série "+(i+1)+" "+p.m);
-const items=k=>{const P=C.plan;if(k==="coop")return["J'ai soutenu mon steppeur","J'ai chronométré séries et récupérations de façon fiable, avec annonces","J'ai fait des retours précis sur sa motricité, ses indices corporels et ventilatoires"];if(k==="flow")return P.map((p,i)=>"100 % de mes FC cible sont atteintes pour la série "+(i+1)+" "+p.m);
- if(k==="ress")return P.map((p,i)=>"J'ai atteint la cible des ressentis (perception de l'effort, ressenti psychologique, musculaire, respiratoire, corporel) pour la série "+(i+1)+" "+p.m).concat(["J'ai décrit précisément mes ressentis pour les modes "+[...new Set(P.map(p=>p.m))].join(" et ")]);
+const sl=()=>C.plan.map((p,i)=>"le mode "+SL(i,C.plan));
+const items=k=>{const P=C.plan;if(k==="coop")return["J'ai soutenu mon steppeur","J'ai chronométré séries et récupérations de façon fiable, avec annonces","J'ai fait des retours précis sur sa motricité, ses indices corporels et ventilatoires"];if(k==="flow")return P.map((p,i)=>"100 % de mes FC cible sont atteintes pour le mode "+SL(i,P));
+ if(k==="ress")return P.map((p,i)=>"J'ai atteint la cible des ressentis (perception de l'effort, ressenti psychologique, musculaire, respiratoire, corporel) pour le mode "+SL(i,P)).concat(["J'ai décrit précisément mes ressentis pour "+(new Set(P.map(p=>p.m)).size>1?"les modes ":"le mode ")+[...new Set(P.map(p=>p.m))].join(" et ")]);
  if(k==="strat")return["FC","motricité","ressentis"].map(t=>"Les paramètres choisis sur "+sl().join(", ")+" m'ont permis d'atteindre ma cible de "+t);
  return CN[k][1]};
 const bilCard=()=>{const v=isCoach()?C.bilc:C.bil,miss=showReq&&!String(v||"").trim();return `<div class="card bilc${miss?" rq":""}"><span class="lb" style="margin-top:0;font-size:13px">${isCoach()?"Mon bilan de coach":"Le bilan de mon entraînement"} <span class="reqt">obligatoire</span></span><textarea class="ta ${miss?"req":""}" id="bt" rows="5" placeholder="${isCoach()?"Ce que j'ai observé, ce qui a aidé mon steppeur, ce que je retiens du coaching…":"Réussites, fierté du jour, points à améliorer, talent déployé…"}">${esc(v)}</textarea></div>`};
@@ -479,18 +513,19 @@ function validate(){const T=trainStarted(),K=coachStarted();
  const b={...XP};KEYS.forEach(k=>XP[k]+=x[k]);H.push({d:new Date().toISOString().slice(0,10),x,r:T&&K?"both":K?"coach":""});saveX();
  const nw=KEYS.filter(k=>b[k]<150&&XP[k]>=150);
  toast(nw.length?"★ Talent révélé : "+nw.map(k=>TAL[k]).join(", "):"Bilan enregistré : +"+tot(x)+" XP");
- okCoachOnly=false;endSeance(x);tipSeen.train=tipSeen.coach=0;PHS.train=0;PHS.coach=0;reset();ph=0;refresh();if(pendRev){const k=pendRev;pendRev="";tab("p1");showProject(k)}else tab("p5")}
+ okCoachOnly=false;endSeance(x);tipSeen.train=tipSeen.coach=0;PHS.train=0;PHS.coach=0;if(!run)reset();ph=0;refresh();if(pendRev){const k=pendRev;pendRev="";tab("p1");showProject(k)}else tab("p5")}
 const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const FN=["SURBOOST","BOOST","STEADY","DIP","DRAIN"],REC=["Étirements","Jumping jacks","Corde à sauter","Pompes","Course","Burpees","Autre"];
 const fmtD=t=>{try{return new Date(t).toLocaleString("fr-FR",{dateStyle:"short",timeStyle:"short",timeZone:"Europe/Paris"})}catch(e){return String(t).slice(0,16)}};
-const mkS=(m,g)=>{g=g===undefined?2:g;m=mk(m);return m==="chill"?{m:"Chill",k:2,n:18,w:0,r:0,R:4,g,off:0}:m==="combo"?{m:"Combo",k:4,n:6,w:0,r:0,R:3,g,off:0}:{m:"Turbo",k:3,n:8,w:30,r:30,R:4,g,off:0}};
-const defPlan=()=>[mkS("Chill",2),mkS("Combo",2),mkS("Turbo",0)];
+const mkS=(m,g)=>{g=g===undefined?2:g;m=mk(m);return m==="chill"?{m:"Chill",k:2,n:18,w:0,r:0,R:4,g,off:0}:m==="combo"?{m:"Combo",k:4,n:6,w:0,r:0,R:2.5,g,off:0}:{m:"Turbo",k:3,n:8,w:30,r:30,R:4,g,off:0}};
+const defPlan=()=>[mkS("Chill",0)];
 const fixP=p=>{if(p&&p.k===undefined){p.k=1;p.R=0}if(p&&p.R===undefined)p.R=0;return p};
 const BLK=()=>[["2 Basics","Cheval","2 Tap-Up","3 Genoux"],["2 Basics","Z Step","Z Step","Genou/ Kick/ Genou"],["","","",""]];
-const newC=()=>({t:new Date().toISOString(),forme:null,ech:"",plan:defPlan(),ent:[0,1,2].map(()=>({fc:"",rpe:0,adj:""})),blocs:BLK(),par:[0,1,2].map(()=>({h:"",imp:0,lest:"",bras:0,rec:[],pas:""})),bil:"",bilc:"",proch:"",rev:"",chk:{},tq:[0,0,0,0,0],role:"train",coach:{obs:[],plan:defPlan()}});
+const newC=()=>({t:new Date().toISOString(),forme:null,ech:"",plan:defPlan(),ent:[0].map(()=>({fc:"",rpe:0,adj:""})),blocs:BLK(),par:[0].map(()=>({h:"",imp:0,lest:"",bras:0,rec:[],pas:""})),bil:"",bilc:"",proch:"",rev:"",chk:{},tq:[0,0,0,0,0],role:"train",picked:false,coach:{obs:[],plan:defPlan(),picked:false}});
 let C=null,Sx=[],ph=0;const OPEN={};
 try{C=JSON.parse(localStorage.getItem("stepxpt:cur")||"null")}catch(e){}if(!C||!C.plan||!C.par||!C.ent||C.plan[0].g===undefined)C=newC();
 if(!C.coach)C.coach={obs:[]};if(C.bilc===undefined)C.bilc="";if(!Array.isArray(C.coach.obs))C.coach.obs=[];if(!C.bp){C.bp=1;if(C.blocs.every(b=>b.every(x=>!String(x).trim())))C.blocs=BLK()}if(!Array.isArray(C.coach.plan)||!C.coach.plan.length)C.coach.plan=JSON.parse(JSON.stringify(C.plan));C.role="train";C.plan.forEach(fixP);C.coach.plan.forEach(fixP);
+while(C.plan.length>2){C.plan.pop();C.par.pop();C.ent.pop()}if(C.coach.plan.length>2)C.coach.plan.length=2;if(C.coach.obs.length>2)C.coach.obs.length=2;
 for(let i=C.plan.length-1;i>=0;i--)if(C.plan[i].off&&C.plan.length>1){C.plan.splice(i,1);C.par.splice(i,1);C.ent.splice(i,1)}
 try{const a=JSON.parse(localStorage.getItem("stepxpt:seances")||"[]");if(Array.isArray(a))Sx=a.filter(x=>x&&x.x&&x.plan)}catch(e){}
 const saveC=()=>{try{localStorage.setItem("stepxpt:cur",JSON.stringify(C))}catch(e){}};
@@ -501,26 +536,25 @@ const isCoach=()=>C.role==="coach";
 const CQ=["Sécurité (appuis, gainage)","Dos droit, regard horizontal","Amplitude, tonicité","Fluidité, continuité","Mouvement / tempo musical"],CQS=["Sécurité","Dos droit","Amplitude","Fluidité","Tempo"],CQV=["Non demandé","Réalisé","À améliorer"];
 const cobs=i=>{C.coach=C.coach||{obs:[]};const o=C.coach.obs;while(o.length<=i)o.push(null);if(!o[i]||!Array.isArray(o[i].tq))o[i]={tq:[-1,-1,-1,-1,-1],rem:"",sup:false,chr:false,fb:false,skip:false};return o[i]};
 const obsL=()=>C.coach.plan.map((_,i)=>i).filter(i=>!cobs(i).skip);
-const coachMiss=()=>{const m=[],L=obsL();if(!L.length)return["au moins une série observée"];L.forEach(i=>{const n=cobs(i).tq.filter(v=>v<0).length;if(n)m.push(n===5?"les 5 indicateurs techniques de la série "+(i+1):(n===1?"1 indicateur technique":n+" indicateurs techniques")+" de la série "+(i+1))});return m};
+const coachMiss=()=>{const m=[],L=obsL();if(!L.length)return["au moins une série observée"];L.forEach(i=>{const n=cobs(i).tq.filter(v=>v<0).length;if(n)m.push(n===5?"les 5 indicateurs techniques du mode "+SL(i,C.coach.plan):(n===1?"1 indicateur technique":n+" indicateurs techniques")+" du mode "+SL(i,C.coach.plan))});return m};
 const coachSup=()=>{const L=obsL();return L.length>0&&L.every(i=>cobs(i).sup)};
 const coachChr=()=>{const L=obsL();return L.length>0&&L.every(i=>cobs(i).chr)};
 const nfc=(i,k,l,mn,st,v)=>`<div class="fl">${l}<div class="stp"><button type="button" data-cst="${i}|${k}|-${st}" aria-label="Moins">−</button><input class="in2" type="number" inputmode="decimal" min="${mn}" step="${st}" data-cp="${i}.${k}" value="${v}"><button type="button" data-cst="${i}|${k}|${st}" aria-label="Plus">+</button></div></div>`;
 function cserRender(){const el=$("cser");if(!el||!isCoach())return;const P=C.coach.plan;
- let h="";
- P.forEach((p,i)=>{const t=p.m==="Chill";h+=`<div class="card sc" style="border:2px solid ${serCol(i)};background:${serBg(i)}">${bandE(i,"c"+i)}<div class="scb" style="${EXP["c"+i]?"":"display:none"}"><div class="sbk"><span class="lb">Type de série</span>${["Chill","Combo","Turbo"].map(x=>`<button type="button" class="cp ${p.m===x?"on":""}" data-cmd="${i}.${x}">${x}</button>`).join("")}</div><div class="sbk"><span class="lb">Durées</span><div class="in2s">${p.m==="Turbo"?nfc(i,"k","Blocs",1,1,p.k||1)+nfc(i,"n","Répétitions par bloc",1,1,p.n)+nfc(i,"w","Effort (s)",5,5,p.w)+nfc(i,"r","Récup entre répét. (s)",5,5,p.r)+nfc(i,"R","Récup entre blocs (min)",0,0.5,p.R||0):nfc(i,"k","Répétitions",1,1,p.k||1)+nfc(i,"n","Durée d'une répétition (min)",1,1,p.n)+nfc(i,"R","Récup entre répétitions (min)",0,0.5,p.R||0)}${nfc(i,"g","Récup après la série (min)",0,0.5,p.g)}</div></div>${P.length>1?`<button type="button" class="btn" data-crm2="${i}" style="margin-top:10px">Retirer cette série</button>`:""}</div></div>`});
- h+=`<p class="tpl">Durée totale du plan : <b>${totMin(P)} min</b> <span class="dim">(avec les récupérations)</span></p><div class="seg">${P.length<5?'<button type="button" data-cadd2="Chill">+ Chill</button><button type="button" data-cadd2="Combo">+ Combo</button><button type="button" data-cadd2="Turbo">+ Turbo</button>':""}</div>`;
+ let h=pickHtml("c");
+ (C.coach.picked?P:[]).forEach((p,i)=>{const t=p.m==="Chill";h+=`<div class="card sc" style="border:2px solid ${serCol(i)};background:${serBg(i)}">${bandE(i,"c"+i,undefined,"Régler les durées")}<div class="scb" style="${EXP["c"+i]?"":"display:none"}"><div class="sbk"><span class="lb">Durées</span><div class="in2s">${p.m==="Turbo"?nfc(i,"k","Blocs",1,1,p.k||1)+nfc(i,"n","Répétitions par bloc",1,1,p.n)+nfc(i,"w","Effort (s)",5,5,p.w)+nfc(i,"r","Récup entre répét. (s)",5,5,p.r)+nfc(i,"R","Récup entre blocs (min)",0,0.5,p.R||0):nfc(i,"k","Répétitions",1,1,p.k||1)+nfc(i,"n","Durée d'une répétition (min)",1,1,p.n)+nfc(i,"R","Récup entre répétitions (min)",0,0.5,p.R||0)}${nfc(i,"g","Récup après la série (min)",0,0.5,p.g)}</div></div></div></div>`});
+ if(C.coach.picked)h+=`<p class="tpl">Durée totale du plan : <b>${totMin(P)} min</b> <span class="dim">(avec les récupérations)</span></p>`;
  el.innerHTML=h;
  Q("#cser [data-cp]").forEach(inp=>{const[i,k]=inp.dataset.cp.split("."),mn=+inp.min||0;inp.oninput=()=>{const v=parseFloat(inp.value);if(!isNaN(v)&&v>=mn){C.coach.plan[+i][k]=v;saveC();rbuild()}};inp.onchange=()=>{const v=parseFloat(inp.value);if(isNaN(v)||v<mn)inp.value=C.coach.plan[+i][k]}});
  Q("#cser [data-cst]").forEach(b=>b.onclick=()=>{const[i,k,d]=b.dataset.cst.split("|"),inp=b.parentNode.querySelector("input"),mn=+inp.min||0,v=Math.max(mn,Math.round((parseFloat(inp.value||0)+parseFloat(d))*10)/10);inp.value=v;C.coach.plan[+i][k]=v;saveC();rbuild()});
  Q("#cser [data-cmd]").forEach(b=>b.onclick=()=>{const[i,m]=b.dataset.cmd.split("."),p=C.coach.plan[+i];if(p.m===m)return;{const g=p.g,off=p.off;Object.assign(p,mkS(m,g));p.off=off}clrCoop();saveC();rbuild();cserRender();sview()});
  Q("#cser [data-crm2]").forEach(b=>b.onclick=()=>{const i=+b.dataset.crm2;Object.keys(EXP).forEach(k=>delete EXP[k]);C.coach.plan.splice(i,1);C.coach.obs.splice(i,1);clrCoop();saveC();rbuild();cserRender();sview()});
- Q("#cser [data-cadd2]").forEach(b=>b.onclick=()=>{const m=b.dataset.cadd2;C.coach.plan.push(mkS(m,2));clrCoop();saveC();rbuild();cserRender();sview()})}
+ Q("#cser [data-cadd2]").forEach(b=>b.onclick=()=>{const m=b.dataset.cadd2;{const L=C.coach.plan[C.coach.plan.length-1];if(L&&!L.g)L.g=2}C.coach.plan.push(mkS(m,0));clrCoop();saveC();rbuild();cserRender();sview()})}
 const tgl=(b,body)=>{$(b).onclick=()=>{const x=$(body);x.hidden=!x.hidden;$(b).classList.toggle("on",!x.hidden);$(b).setAttribute("aria-expanded",String(!x.hidden))}};
 tgl("kpb","kpbody");tgl("kfb","kfbody");tgl("khb","khbody");
-$("mhb").onclick=()=>{const b=$("mhbody");b.hidden=!b.hidden;$("mhero").classList.toggle("open",!b.hidden);$("mhb").setAttribute("aria-expanded",String(!b.hidden))};
 try{new IntersectionObserver(es=>{ckVis=es[0].isIntersecting;miniUpd()},{threshold:.15}).observe($("ck"))}catch(e){}
-$("mini").onclick=()=>$("ck").scrollIntoView({behavior:"smooth",block:"center"});
-$("tocarnet").onclick=()=>{tab("p5");const l=$("lst");if(l)l.scrollIntoView({behavior:"smooth"})};
+$("mini").onclick=()=>{if(!$("p6").classList.contains("on"))tab("p6");setTimeout(()=>$("ck").scrollIntoView({behavior:"smooth",block:"center"}),50)};
+$("tocarnet").onclick=()=>{tab("p1");const l=$("lst");if(l)l.scrollIntoView({behavior:"smooth"})};
 const PL=()=>isCoach()?C.coach.plan:C.plan;
 const clrCoop=()=>{Object.keys(C.chk||{}).forEach(k=>{if(k.indexOf("coop.")===0)delete C.chk[k]})};
 const trainStarted=()=>C.forme!=null||String(C.ech||"").trim()!==""||C.ent.some(e=>e.fc||e.rpe||String(e.desc||"").trim()||String(e.adj||"").trim())||JSON.stringify(C.blocs)!==JSON.stringify(BLK())||C.par.some(p=>p.h||p.imp||p.lest||p.bras||(p.rec||[]).length||String(p.pas||"").trim());
@@ -545,7 +579,8 @@ const techOk=()=>{const t=C.tq||[];return t.includes(1)&&!t.includes(2)};
 const chk=(k,j)=>{if(k==="strat")return j===0?flowOk():j===1?techOk():ressOk();const v=(C.chk||{})[k+"."+j];return v!==undefined?v:pre(k,j)};
 function stratSync(){Q('#cn input[data-k="strat"]').forEach((i,j)=>{i.checked=chk("strat",j)});const n=$("stn");if(n){const m=[];if(!flowOk())m.push("mes FC cibles atteintes");if(!techOk())m.push("ma technique réussie");if(!ressOk())m.push("mes ressentis atteints et expliqués");n.textContent=m.length?"Se débloque quand mes cibles sont atteintes. Il me reste : "+m.join(", ")+".":"Mes cibles sont atteintes : stratégie débloquée, +30 XP."}}
 const SER=m=>mk(m)==="chill"?{bg:"#00BF63",n:"Chill",t:"#021849"}:mk(m)==="combo"?{bg:"#FFCC00",n:"Combo",t:"#021849"}:{bg:"linear-gradient(90deg,#FF914D,#A8040B)",n:"Turbo",t:"#fff"};
-const band=(i,x)=>{const z=SER(PL()[i]?PL()[i].m:"Turbo");return `<div class="sch" style="background:${z.bg}"><span>Série ${i+1} · ${z.n}</span><span style="color:${z.t}">${x||""}</span></div>`};
+const SL=(i,P)=>{P=P||PL();const q=P[i]||{},n=SER(q.m).n;return P.filter(x=>x&&x.m===q.m).length>1?n+" ("+(i+1)+")":n};
+const band=(i,x)=>{const z=SER(PL()[i]?PL()[i].m:"Turbo");return `<div class="sch" style="background:${z.bg}"><span>${SL(i)}</span><span style="color:${z.t}">${x||""}</span></div>`};
 const EXP={},hexA=(h,a)=>{const n=parseInt(h.slice(1),16);return `rgba(${n>>16},${n>>8&255},${n&255},${a})`};
 const parSum=p=>[p.h&&"Step "+p.h,p.imp&&"Impulsions",p.lest&&p.lest!=="Aucun"&&"Lests "+p.lest,p.bras&&"Bras au-dessus de l'horizontale"].filter(Boolean).join(" · ")||"Aucun paramètre choisi";
 const mSum=(e,i)=>"FC "+(e.fc?e.fc+" bpm":"–")+" · effort "+(e.rpe?e.rpe+"/5":"–")+(verd(i+1,+e.fc)?" · "+verd(i+1,+e.fc):"");
@@ -553,7 +588,7 @@ const gTxt=g=>g?" + Récupération "+String(g).replace(".",",")+" minute"+(g>1?"
 const serTxt=p=>planTxt(p);
 const serBg=i=>MBG[mk((PL()[i]||{}).m)]||MBG.turbo;
 const serCol=i=>MCOL[mk((PL()[i]||{}).m)]||MCOL.turbo;
-const bandE=(i,key,sum,lbl)=>{const p=PL()[i]||{m:"Turbo",n:6,w:30,r:30,g:0},z=SER(p.m);return `<div class="sch ser" style="background:${z.bg};color:${z.t}"><div class="sct"><b>Série ${i+1} · ${z.n}</b><span>${sum||serTxt(p)}</span></div><button type="button" class="mod" data-ex="${key}">${EXP[key]?"Fermer":(lbl||"Modifier")}</button></div>`};
+const bandE=(i,key,sum,lbl)=>{const p=PL()[i]||{m:"Turbo",n:6,w:30,r:30,g:0},z=SER(p.m);return `<div class="sch ser" style="background:${z.bg};color:${z.t}"><div class="sct"><b>${SL(i)}</b><span>${sum||serTxt(p)}</span></div><button type="button" class="mod" data-ex="${key}">${EXP[key]?"Fermer":(lbl||"Modifier")}</button></div>`};
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-ex]");if(!b)return;const k=b.dataset.ex;EXP[k]=!EXP[k];if(k[0]==="c")cserRender();else sview()});
 const vcol=t=>/^✓/.test(t)?"#00BF63":"#FF4D5A";
 function sview(){if(isCoach()&&ph===1)ph=2;const hs=Q("#flow .acch");hs.forEach(b=>{const on=+b.dataset.s===ph;b.classList.toggle("on",on);b.setAttribute("aria-expanded",String(on))});
@@ -586,9 +621,9 @@ const HW=`<div class="card hp" id="hw" hidden><h4>Au cou (artère carotide)</h4>
  const h0=`<div class="dt0">Entraînement du <b>${fmtD(new Date())}</b> <span class="dim">(heure de Paris)</span></div>${pjRem()}`;
  if(isCoach()){v.innerHTML=h0+coachPrep();bindRole();return}
  let h=h0+`${stp("st1","1","Je me situe")}<div class="stpb" ${EXP.st1?"":"hidden"}><div class="card"><span class="lb" style="margin-top:0">Mon état de forme</span><div class="fm">${FN.map((n,i)=>`<button class="cp ${C.forme===i?"on":""}" data-f="${i}">${pips(5-i,"#9DB5FF")}<br>${n}</button>`).join("")}</div></div></div>
-${stp("st2","2","Je planifie mon entraînement")}<div class="stpb" ${EXP.st2?"":"hidden"}><div class="sub"><div class="subh">Mon échauffement</div><div class="subb"><textarea class="ta" id="ec" rows="2" placeholder="Exercices, durée…">${esc(C.ech)}</textarea></div></div><div class="sub"><div class="subh">Mon plan d'entraînement</div><div class="subb"><p class="dim">Je peux l'adapter à mon état de forme.</p>`;
- C.plan.forEach((p,i)=>{const t=p.m==="Chill",[a,b]=zt(i+1);h+=`<div class="card sc" style="border:2px solid ${serCol(i)};background:${serBg(i)}">${bandE(i,"t"+i)}<div class="scb" style="${EXP["t"+i]?"":"display:none"}"><span class="lb" style="margin-top:2px">Type de série</span>${["Chill","Combo","Turbo"].map(x=>`<button class="cp ${p.m===x?"on":""}" data-md="${i}.${x}">${x}</button>`).join("")}<span class="chip" style="margin-left:4px">Cible FC : ${a}–${b} bpm · effort ${effTxt(p.m)}</span><div class="in2s" style="margin-top:6px">${p.m==="Turbo"?nf(i,"k","Blocs",1,1,p.k||1)+nf(i,"n","Répétitions par bloc",1,1,p.n)+nf(i,"w","Effort (s)",5,5,p.w)+nf(i,"r","Récup entre répét. (s)",5,5,p.r)+nf(i,"R","Récup entre blocs (min)",0,0.5,p.R||0):nf(i,"k","Répétitions",1,1,p.k||1)+nf(i,"n","Durée d'une répétition (min)",1,1,p.n)+nf(i,"R","Récup entre répétitions (min)",0,0.5,p.R||0)}${nf(i,"g","Récup après la série (min)",0,0.5,p.g)}</div>${C.plan.length>1?`<button class="btn" data-rm="${i}" style="margin-top:8px">Retirer cette série</button>`:""}</div></div>`});
- h+=`<p class="tpl">Durée totale de mon plan : <b>${totMin(C.plan)} min</b> <span class="dim">(avec les récupérations)</span></p><div class="seg">${C.plan.length<5?'<button data-add="Chill">+ Chill</button><button data-add="Combo">+ Combo</button><button data-add="Turbo">+ Turbo</button>':""}</div>`;
+${stp("st2","2","Je planifie mon entraînement")}<div class="stpb" ${EXP.st2?"":"hidden"}><div class="sub"><div class="subh">Mon échauffement</div><div class="subb"><textarea class="ta" id="ec" rows="2" placeholder="Exercices, durée…">${esc(C.ech)}</textarea></div></div><div class="sub"><div class="subh">Mon plan d'entraînement</div><div class="subb"><p class="dim">Je choisis un mode d'entraînement, ou j'en combine deux. Je peux l'adapter à mon état de forme.</p>${pickHtml("t")}`;
+ (C.picked?C.plan:[]).forEach((p,i)=>{const t=p.m==="Chill",[a,b]=zt(i+1);h+=`<div class="card sc" style="border:2px solid ${serCol(i)};background:${serBg(i)}">${bandE(i,"t"+i,undefined,"Régler les durées")}<div class="scb" style="${EXP["t"+i]?"":"display:none"}"><span class="chip" style="margin-left:4px">Cible FC : ${a}–${b} bpm · effort ${effTxt(p.m)}</span><div class="in2s" style="margin-top:6px">${p.m==="Turbo"?nf(i,"k","Blocs",1,1,p.k||1)+nf(i,"n","Répétitions par bloc",1,1,p.n)+nf(i,"w","Effort (s)",5,5,p.w)+nf(i,"r","Récup entre répét. (s)",5,5,p.r)+nf(i,"R","Récup entre blocs (min)",0,0.5,p.R||0):nf(i,"k","Répétitions",1,1,p.k||1)+nf(i,"n","Durée d'une répétition (min)",1,1,p.n)+nf(i,"R","Récup entre répétitions (min)",0,0.5,p.R||0)}${nf(i,"g","Récup après la série (min)",0,0.5,p.g)}</div></div></div>`});
+ if(C.picked)h+=`<p class="tpl">Durée totale de mon plan : <b>${totMin(C.plan)} min</b> <span class="dim">(avec les récupérations)</span></p>`;
  h+='</div></div><div class="sub"><div class="subh">Mes blocs chorégraphiques</div><div class="subb">';
  C.blocs.forEach((b,i)=>{const k="b"+i,sm=b.filter(x=>String(x).trim()).join(" · ")||"À remplir";h+=`<div class="card sc" style="border:2px solid #9DB5FF;background:${OG}"><div class="sch ser" style="background:#9DB5FF;color:#021849"><div class="sct"><b>Bloc ${i+1}${i>=1?" (facultatif)":""}</b><span>${esc(sm)}</span></div><button type="button" class="mod" data-ex="${k}">${EXP[k]?"Fermer":"Modifier"}</button></div><div class="scb g2" style="${EXP[k]?"":"display:none"}">${b.map((x,j)=>`<div class="bk"><small>8 temps · ${j+1}</small><input class="in2" data-b="${i}.${j}" value="${esc(x)}" placeholder="8 temps · ${j+1}"></div>`).join("")}</div></div>`});
  h+='</div></div></div>'+stp("st3","3","Je choisis mes paramètres")+'<div class="stpb" '+(EXP.st3?"":"hidden")+'>';
@@ -600,7 +635,7 @@ ${stp("st2","2","Je planifie mon entraînement")}<div class="stpb" ${EXP.st2?"":
  Q("#sv [data-st]").forEach(b=>b.onclick=()=>{const[i,k,d]=b.dataset.st.split("|"),el=b.parentNode.querySelector("input"),mn=+el.min||0,v=Math.max(mn,Math.round((parseFloat(el.value||0)+parseFloat(d))*10)/10);el.value=v;C.plan[+i][k]=v;saveC();rbuild()});
  Q("#sv [data-md]").forEach(b=>b.onclick=()=>{const[i,m]=b.dataset.md.split("."),p=C.plan[+i];if(p.m===m)return;C.chk={};{const g=p.g,off=p.off;Object.assign(p,mkS(m,g));p.off=off}saveC();rbuild();sview()});
  Q("#sv [data-rm]").forEach(b=>b.onclick=()=>{const i=+b.dataset.rm;Object.keys(EXP).forEach(k=>delete EXP[k]);C.plan.splice(i,1);C.par.splice(i,1);C.ent.splice(i,1);C.chk={};saveC();rbuild();sview()});
- Q("#sv [data-add]").forEach(b=>b.onclick=()=>{const m=b.dataset.add;C.plan.push(mkS(m,2));C.par.push({h:"",imp:0,lest:"",bras:0,rec:[],pas:""});C.ent.push({fc:"",rpe:0,adj:"",desc:""});C.chk={};saveC();rbuild();sview()});
+ Q("#sv [data-add]").forEach(b=>b.onclick=()=>{const m=b.dataset.add;{const L=C.plan[C.plan.length-1];if(L&&!L.g)L.g=2}C.plan.push(mkS(m,0));C.par.push({h:"",imp:0,lest:"",bras:0,rec:[],pas:""});C.ent.push({fc:"",rpe:0,adj:"",desc:""});C.chk={};saveC();rbuild();sview()});
  Q("#sv [data-b]").forEach(el=>el.oninput=()=>{const[i,j]=el.dataset.b.split(".");C.blocs[+i][+j]=el.value;saveC()});
  Q("#sv [data-t]").forEach(el=>el.oninput=()=>{C.par[+el.dataset.t].pas=el.value;saveC()});
  Q("#sv [data-g]").forEach(b=>b.onclick=()=>{const[,i,k]=b.dataset.g.split("."),q=C.par[+i],x=b.dataset.v;
@@ -609,7 +644,7 @@ const PHS={train:0,coach:0};
 function setRole(r){const slot=$(r==="coach"?"slotC":"slotT");if(C.role===r&&$("flow").parentNode===slot)return;PHS[C.role==="coach"?"coach":"train"]=ph;C.role=r;ph=PHS[r]||0;slot.appendChild($("flow"));saveC();cserRender();sview()}
 function bindRole(){}
 const coachPrep=()=>`<div class="mhero">Je booste les progrès de mon steppeur.</div><h3 class="sh3"><span class="nb">1</span>Missions</h3><div class="card mi" style="border-left-color:#00BF63"><b>1 · Soutenir</b><p>Je soutiens psychologiquement mon steppeur, avant, pendant et après ses séries.</p></div><div class="card mi" style="border-left-color:#4CC9F0"><b>2 · Chronométrer</b><p>Je chronomètre ses séries et ses récupérations avec des annonces fiables, grâce au « Chrono série » ci-dessus.</p></div><div class="card mi" style="border-left-color:#FF914D"><b>3 · Faire des retours précis</b><p>Je fais des retours sur sa motricité, ses indices corporels et ventilatoires.</p></div><p class="dim">Je n'enregistre aucun nom ni aucune donnée sur mon steppeur.</p><button type="button" class="btn cta" onclick="goPh(2)">J'observe et je soutiens →</button>`;
-const skipCard=i=>`<div class="card sc" style="border:2px dashed ${serCol(i)};opacity:.72"><div class="sch ser" style="background:#3A4F8F;color:#fff"><div class="sct"><b>Série ${i+1} · ${C.coach.plan[i].m}</b><span>Série non observée</span></div><button type="button" class="mod" data-skip="${i}">J'observe de nouveau</button></div></div>`;
+const skipCard=i=>`<div class="card sc" style="border:2px dashed ${serCol(i)};opacity:.72"><div class="sch ser" style="background:#3A4F8F;color:#fff"><div class="sct"><b>${SL(i,C.coach.plan)}</b><span>Mode non observé</span></div><button type="button" class="mod" data-skip="${i}">J'observe de nouveau</button></div></div>`;
 function coachView(v){let h=`<h3 class="sh3"><span class="nb">2</span>J'observe et je soutiens</h3><p class="dim">Pour chaque série de mon steppeur, je choisis sur chacun des 5 indicateurs : « non demandé », « réalisé » ou « à améliorer ». Une série que je n'observe pas peut être écartée (bouton en bas de la carte).</p>`;
  C.coach.plan.forEach((p,i)=>{const o=cobs(i),dn=o.tq.filter(x=>x>=0).length;if(o.skip){h+=skipCard(i);return}if(showReq&&dn<5)EXP["o"+i]=true;h+=`<div class="card sc" style="border:2px solid ${serCol(i)};background:${serBg(i)}">${bandE(i,"o"+i,dn+"/5 indicateurs · "+(o.sup?"✓":"–")+" soutien · "+(o.chr?"✓":"–")+" chrono · "+(o.fb?"✓":"–")+" retours","Ouvrir")}<div class="scb" style="${EXP["o"+i]?"":"display:none"}"><div class="sbk"><span class="lb"><span class="dot" style="background:#FF914D"></span>Les 5 indicateurs techniques <span class="reqt">obligatoire</span><span class="cnt ${dn===5?"ok":""}">${dn}/5</span></span>${CQ.map((t,j)=>`<div class="${showReq&&o.tq[j]<0?"rq":""}" style="margin:8px 0"><div style="font-size:13px"><b>${t}</b></div>${CQV.map((l,x)=>`<button type="button" class="cp ${o.tq[j]===x?"on":""}" data-ct="${i}.${j}.${x}">${l}</button>`).join("")}</div>`).join("")}</div><div class="sbk"><span class="lb"><span class="dot" style="background:#4CC9F0"></span>Mes propositions <span class="dim">(facultatif)</span></span><textarea class="ta" rows="2" maxlength="300" data-cr="${i}" placeholder="Ce que je propose à mon steppeur pour progresser…">${esc(o.rem)}</textarea></div><div class="sbk"><span class="lb"><span class="dot" style="background:#00BF63"></span>Mes missions pour cette série</span><label class="ckb"><input type="checkbox" data-cs="${i}" ${o.sup?"checked":""}>J'ai soutenu mon steppeur</label><label class="ckb"><input type="checkbox" data-cc="${i}" ${o.chr?"checked":""}>J'ai chronométré séries et récupérations de façon fiable, avec annonces</label><label class="ckb"><input type="checkbox" data-cf="${i}" ${o.fb?"checked":""}>J'ai fait des retours précis sur sa motricité, ses indices corporels et ventilatoires.</label></div><button type="button" class="btn" data-skip="${i}" style="margin-top:12px;width:100%">Je n'observe pas cette série</button></div></div>`});
  h+='<p class="dim">Quand les 5 indicateurs sont choisis pour chaque série, je passe à « Faire le bilan ».</p>';v.innerHTML=h;
@@ -620,23 +655,23 @@ function coachView(v){let h=`<h3 class="sh3"><span class="nb">2</span>J'observe 
  Q("#sv [data-cf]").forEach(el=>el.onchange=()=>{cobs(+el.dataset.cf).fb=el.checked;saveC()});
  Q("#sv [data-skip]").forEach(b=>b.onclick=()=>{const o=cobs(+b.dataset.skip);o.skip=!o.skip;clrCoop();saveC();sview()})}
 let showReq=false;
-const missEnt=()=>{const m=[];C.plan.forEach((p,i)=>{const e=C.ent[i];if(!e.rpe)m.push("l'effort perçu de la série "+(i+1));if(!String(e.desc||"").trim())m.push("la description de mes ressentis de la série "+(i+1))});return m};
+const missEnt=()=>{const m=[];C.plan.forEach((p,i)=>{const e=C.ent[i];if(!e.rpe)m.push("l'effort perçu du mode "+SL(i,C.plan));if(!String(e.desc||"").trim())m.push("la description de mes ressentis du mode "+SL(i,C.plan))});return m};
 Q("#flow .acch").forEach(b=>b.onclick=()=>{const t=+b.dataset.s;if(ph===t){ph=0;sview();return}if(t===3){const m=isCoach()?coachMiss():missEnt();if(m.length){showReq=true;ph=2;sview();toast("Pour faire le bilan, je remplis : "+m.slice(0,2).join(" et ")+(m.length>2?"…":""));return}}ph=t;sview()});
-function endSeance(x){{const b=$("bt");if(b)C[isCoach()?"bilc":"bil"]=b.value}C.t=new Date().toISOString();C.ent.forEach((e,i)=>{[e.lo,e.hi]=zt(i+1)});{const R={...C,x,id:Date.now(),pt:{train:trainStarted()?1:0,coach:coachStarted()?1:0}};delete R.chk;delete R.tq;delete R.rev;Sx.push(R)}revCtl();saveS();C=newC();showReq=false;saveC();ph=0;sview();lst();reset()}
+function endSeance(x){{const b=$("bt");if(b)C[isCoach()?"bilc":"bil"]=b.value}C.t=new Date().toISOString();C.ent.forEach((e,i)=>{[e.lo,e.hi]=zt(i+1)});{const R={...C,x,id:Date.now(),pt:{train:trainStarted()?1:0,coach:coachStarted()?1:0}};delete R.chk;delete R.tq;delete R.rev;Sx.push(R)}revCtl();saveS();C=newC();showReq=false;saveC();ph=0;sview();lst();if(!run)reset()}
 function coachSec(s,A){const cp=(s.coach&&s.coach.plan)||s.plan||[],ob=(s.coach&&s.coach.obs)||[];
  A("h","JE COACHE : J'OBSERVE ET JE SOUTIENS");
- cp.forEach((p,i)=>{const b=ob[i];if(!b||b.skip)return;A("s","Série "+(i+1)+" · "+p.m,{c:pdfC(p.m)});CQS.forEach((t,j)=>A("r",t,{v:CQV[b.tq[j]]||"-"}));A("r","Propositions",{v:b.rem||"-"});A("r","Soutien",{v:b.sup?"J'ai soutenu mon steppeur":"-"});A("r","Chrono",{v:b.chr?"J'ai chronométré séries et récupérations de façon fiable, avec annonces":"-"});A("r","Retours",{v:b.fb?"J'ai fait des retours précis (motricité, indices corporels et ventilatoires)":"-"})})}
+ cp.forEach((p,i)=>{const b=ob[i];if(!b||b.skip)return;A("s",SL(i,cp),{c:pdfC(p.m)});CQS.forEach((t,j)=>A("r",t,{v:CQV[b.tq[j]]||"-"}));A("r","Propositions",{v:b.rem||"-"});A("r","Soutien",{v:b.sup?"J'ai soutenu mon steppeur":"-"});A("r","Chrono",{v:b.chr?"J'ai chronométré séries et récupérations de façon fiable, avec annonces":"-"});A("r","Retours",{v:b.fb?"J'ai fait des retours précis (motricité, indices corporels et ventilatoires)":"-"})})}
 function coachBlk(s){const cp=(s.coach&&s.coach.plan)||s.plan||[],ob=(s.coach&&s.coach.obs)||[];
- return cp.map((p,i)=>{const b=ob[i];if(!b||b.skip)return"";return `<div class="dr2"><b>Série ${i+1} · ${p.m}</b>${CQ.map((t,j)=>"<br>"+esc(t)+" : "+(CQV[b.tq[j]]||"-")).join("")}${b.rem?"<br>Propositions : "+esc(b.rem):""}<br>${b.sup?"✓ J'ai soutenu mon steppeur":"Soutien non coché"}<br>${b.chr?"✓ J'ai chronométré séries et récupérations de façon fiable, avec annonces":"Chronométrage non coché"}<br>${b.fb?"✓ J'ai fait des retours précis (motricité, indices corporels et ventilatoires)":"Retours précis non cochés"}</div>`}).join("")||'<p class="dim">Rien de noté.</p>'}
+ return cp.map((p,i)=>{const b=ob[i];if(!b||b.skip)return"";return `<div class="dr2"><b>${SL(i,cp)}</b>${CQ.map((t,j)=>"<br>"+esc(t)+" : "+(CQV[b.tq[j]]||"-")).join("")}${b.rem?"<br>Propositions : "+esc(b.rem):""}<br>${b.sup?"✓ J'ai soutenu mon steppeur":"Soutien non coché"}<br>${b.chr?"✓ J'ai chronométré séries et récupérations de façon fiable, avec annonces":"Chronométrage non coché"}<br>${b.fb?"✓ J'ai fait des retours précis (motricité, indices corporels et ventilatoires)":"Retours précis non cochés"}</div>`}).join("")||'<p class="dim">Rien de noté.</p>'}
 function sLines(s){const pt=parts(s);const o=[],A=(k,t,x)=>o.push(Object.assign({k,t},x||{}));
  A("t","StepXP - Mon carnet de suivi d'entraînement",{u:"Élève : "+(who()||"non renseigné")+"   |   Séance du "+fmtD(s.t)+"   |   Rôle : "+roleTxt(pt)});
  if(pt.train){A("h","1 · JE ME SITUE");A("r","Mon état de forme",{v:s.forme!=null?FN[s.forme]:"-"});
  A("h","2 · JE PLANIFIE MA SÉANCE DU JOUR");A("r","Échauffement",{v:s.ech||"-"});
- s.plan.forEach((p,i)=>A("r","Série "+(i+1)+" · "+p.m,{v:planTxt(p)+(p.off?" (retirée)":"")}));
+ s.plan.forEach((p,i)=>A("r",SL(i,s.plan),{v:planTxt(p)+(p.off?" (retirée)":"")}));
  s.blocs.forEach((b,i)=>{if(b.some(x=>x))A("r","Bloc "+(i+1),{v:b.map(x=>x||"-").join(" | ")})});
- A("h","3 · JE CHOISIS MES PARAMÈTRES");s.par.forEach((p,i)=>A("r","Série "+(i+1),{v:parTxt(p)}));
+ A("h","3 · JE CHOISIS MES PARAMÈTRES");s.par.forEach((p,i)=>A("r",SL(i,s.plan),{v:parTxt(p)}));
  A("h","4 · JE MESURE LES EFFETS");
- (s.ent||[]).forEach((e,i)=>{if(e.fc||e.rpe||e.desc||e.adj){A("s","Série "+(i+1)+" · "+s.plan[i].m,{c:pdfC(s.plan[i].m)});A("r","FC",{v:(e.fc||"-")+" bpm"+(e.lo?" (cible "+e.lo+"-"+e.hi+")":"")});A("r","Effort perçu",{v:(e.rpe||"-")+" / 5"});if(e.desc)A("r","Ressentis",{v:e.desc});if(e.adj)A("r","Ajustements",{v:e.adj})}});
+ (s.ent||[]).forEach((e,i)=>{if(e.fc||e.rpe||e.desc||e.adj){A("s",SL(i,s.plan),{c:pdfC(s.plan[i].m)});A("r","FC",{v:(e.fc||"-")+" bpm"+(e.lo?" (cible "+e.lo+"-"+e.hi+")":"")});A("r","Effort perçu",{v:(e.rpe||"-")+" / 5"});if(e.desc)A("r","Ressentis",{v:e.desc});if(e.adj)A("r","Ajustements",{v:e.adj})}});
  }
  if(pt.coach)coachSec(s,A);
  A("h","5 · CAPITALISER");A("r","XP de la séance",{v:tot(s.x)+" / "+maxOf(s)});if(pt.train&&pt.coach){A("r","XP Steppeur",{v:tsOf(s.x)+" / 120"});A("r","XP Coach",{v:(s.x.coop||0)+" / 30"})}keysOf(s).forEach(k=>A("x",NM(k),{n:s.x[k]||0,m:30}));if(pt.train)A("r",pt.coach?"Bilan Steppeur":"Bilan",{v:bilTrain(s)||"-"});if(pt.coach)A("r","Bilan Coach",{v:bilCoach(s)||"-"});return o}
@@ -668,23 +703,24 @@ async function sendPdf(L,name){if(needName())return;const f=new File([pdfLines(L
 const orbN={flow:"Flow",tech:"Tech.",ress:"Ress.",strat:"Strat.",coop:"Coop."};
 const parTxt=p=>"step "+(p.h||"-")+", impulsions "+(p.imp?"oui":"non")+", lests "+(p.lest||"-")+", bras "+(p.bras?"au-dessus de l'horizontale":"non")+", récup : "+((p.rec||[]).join(", ")||"-")+", pas : "+(p.pas||"-");
 function detail(s){const pt=parts(s);const bl=(t,i)=>`<div class="db"><div class="dh">${t}</div><div class="dbb">${i}</div></div>`,r=(a,b)=>`<div class="dr"><b>${a}</b><span>${esc(b)}</span></div>`;
- const prep=r("Échauffement",s.ech||"-")+s.plan.map((p,i)=>r("Série "+(i+1)+" · "+p.m,planTxt(p)+(p.off?" (retirée)":""))).join("")+s.blocs.map((b,i)=>b.some(x=>x)?r("Bloc "+(i+1),b.map(x=>x||"-").join(" | ")):"").join("")+s.par.map((p,i)=>r("Paramètres S"+(i+1),parTxt(p))).join("");
- const ent=(s.ent||[]).map((e,i)=>e.fc||e.rpe||e.desc||e.adj?`<div class="dr2"><b>Série ${i+1}</b> · FC ${esc(e.fc)||"-"} bpm${e.lo?" (cible "+e.lo+"–"+e.hi+")":""} · effort ${e.rpe||"-"}/5${e.desc?"<br>Ressentis : "+esc(e.desc):""}${e.adj?"<br>Ajustements : "+esc(e.adj):""}</div>`:"").join("")||'<p class="dim">Rien de noté.</p>';
+ const prep=r("Échauffement",s.ech||"-")+s.plan.map((p,i)=>r(SL(i,s.plan),planTxt(p)+(p.off?" (retirée)":""))).join("")+s.blocs.map((b,i)=>b.some(x=>x)?r("Bloc "+(i+1),b.map(x=>x||"-").join(" | ")):"").join("")+s.par.map((p,i)=>r("Paramètres S"+(i+1),parTxt(p))).join("");
+ const ent=(s.ent||[]).map((e,i)=>e.fc||e.rpe||e.desc||e.adj?`<div class="dr2"><b>${SL(i,s.plan)}</b> · FC ${esc(e.fc)||"-"} bpm${e.lo?" (cible "+e.lo+"–"+e.hi+")":""} · effort ${e.rpe||"-"}/5${e.desc?"<br>Ressentis : "+esc(e.desc):""}${e.adj?"<br>Ajustements : "+esc(e.adj):""}</div>`:"").join("")||'<p class="dim">Rien de noté.</p>';
  const bil=r("Rôle",roleTxt(pt))+r("XP",keysOf(s).map(k=>NM(k)+" "+(s.x[k]||0)).join(" · "))+(pt.train&&pt.coach?r("XP Steppeur",tsOf(s.x)+" / 120")+r("XP Coach",(s.x.coop||0)+" / 30"):"")+(pt.train?r(pt.coach?"Bilan Steppeur":"Bilan",bilTrain(s)||"-"):"")+(pt.coach?r("Bilan Coach",bilCoach(s)||"-"):"");
  return `<div style="margin-top:12px">${pt.train?bl("Préparer · 1, 2 et 3",prep)+bl("4 · Je mesure les effets",ent):""}${pt.coach?bl("Je coache : j'observe et je soutiens",coachBlk(s)):""}${bl("5 · Capitaliser",bil)}<div class="seg">${pt.train?`<button data-reuse="${s.id}">Reprendre ces choix</button>`:""}<button data-pdf="${s.id}">Envoyer / PDF</button><button data-del="${s.id}">Supprimer</button></div></div>`}
 const guardSend=go=>{if(trainStarted()||coachStarted()){askBox("Ma séance du jour n'est pas enregistrée : elle ne sera pas dans le PDF.","J'envoie quand même","J'enregistre d'abord",go,()=>{tab("p4");ph=coachMiss().length?2:3;sview()});return}go()};
 function lst(){const L=Sx.slice().reverse();
- $("lst").innerHTML=(L.length?'<p class="dim">Je consulte mes entraînements passés pour faire mes choix futurs.</p>':"")+(L.map(s=>`<div class="card"><div class="hh" data-k="${s.id}"><div><div class="hd1">Séance du ${fmtD(s.t)}</div><div class="dim">${hdrTxt(s)}</div>${splitTxt(s)}</div><div class="hx"><b>${tot(s.x)}</b><small>/ ${maxOf(s)} XP</small></div></div><div class="xps">${keysOf(s).map(k=>`<div class="xp"><div class="xb2"><i style="width:${Math.round((s.x[k]||0)/30*100)}%"></i></div>${orbN[k]} ${s.x[k]||0}</div>`).join("")}</div>${OPEN[s.id]?detail(s):'<p class="dim" style="margin:10px 0 0">Appuyer sur la date pour consulter</p>'}</div>`).join("")||'<p class="dim">Aucun entraînement dans mon carnet pour le moment.</p>')+(Sx.length?'<div class="seg" style="margin-top:10px"><button id="ca">Envoyer mon carnet de suivi d\'entraînement</button></div>':"");
+ $("lst").innerHTML=(L.length?'<p class="dim">Je consulte mes entraînements passés pour faire mes choix futurs.</p>':"")+(L.map(s=>`<div class="card"><div class="hh" data-k="${s.id}"><div><div class="hd1">Séance du ${fmtD(s.t)}</div><div class="dim">${hdrTxt(s)}</div>${splitTxt(s)}</div><div class="hx"><b>${tot(s.x)}</b><small>/ ${maxOf(s)} XP</small></div></div><div class="xps">${keysOf(s).map(k=>`<div class="xp"><div class="xb2"><i style="width:${Math.round((s.x[k]||0)/30*100)}%"></i></div>${orbN[k]} ${s.x[k]||0}</div>`).join("")}</div>${OPEN[s.id]?detail(s):'<p class="dim" style="margin:10px 0 0">Appuyer sur la date pour consulter</p>'}</div>`).join("")||'<p class="dim">Aucun entraînement dans mon carnet pour le moment.</p>')+(Sx.length?'<div class="seg wrap" style="margin-top:10px"><button id="cpf" style="flex:1 1 100%;background:#4CC9F0;color:#021849;border-color:#4CC9F0;font-weight:700;padding:14px">Enregistrer en PDF</button><button id="ca" style="flex:1 1 100%">Envoyer mon carnet de suivi d\'entraînement</button></div>':"");
  Q("#lst [data-k]").forEach(el=>el.onclick=()=>{OPEN[el.dataset.k]=!OPEN[el.dataset.k];lst()});
  Q("#lst [data-pdf]").forEach(b=>b.onclick=()=>{const s=Sx.find(x=>String(x.id)===b.dataset.pdf);if(s)guardSend(()=>sendPdf(sLines(s),"stepxpt-entrainement.pdf"))});
  Q("#lst [data-del]").forEach(b=>b.onclick=()=>{if(confirm("Supprimer cet entraînement de mon carnet ?")){Sx=Sx.filter(x=>String(x.id)!==b.dataset.del);saveS();lst()}});
- Q("#lst [data-reuse]").forEach(b=>b.onclick=()=>{const s=Sx.find(x=>String(x.id)===b.dataset.reuse);if(!s||!confirm("Je prépare mon prochain entraînement à partir de celui-ci ? Mes saisies en cours seront remplacées."))return;const n=newC(),cp=o=>JSON.parse(JSON.stringify(o));if(typeof s.plan[0].w==="number")n.plan=cp(s.plan);n.blocs=cp(s.blocs);if(s.par.length===n.plan.length)n.par=cp(s.par);n.plan.forEach(p=>p.off=0);n.ent=n.plan.map(()=>({fc:"",rpe:0,adj:"",desc:""}));C=n;saveC();ph=1;sview();rbuild();tab("p5");toast("Mes choix précédents sont repris : je peux les modifier")});
- if($("ca"))$("ca").onclick=()=>guardSend(()=>sendPdf(carnetLines(),"stepxpt-carnet.pdf"))}
+ Q("#lst [data-reuse]").forEach(b=>b.onclick=()=>{const s=Sx.find(x=>String(x.id)===b.dataset.reuse);if(!s||!confirm("Je prépare mon prochain entraînement à partir de celui-ci ? Mes saisies en cours seront remplacées."))return;const n=newC(),cp=o=>JSON.parse(JSON.stringify(o));if(typeof s.plan[0].w==="number")n.plan=cp(s.plan);n.blocs=cp(s.blocs);if(s.par.length===n.plan.length)n.par=cp(s.par);n.plan.forEach(p=>p.off=0);n.ent=n.plan.map(()=>({fc:"",rpe:0,adj:"",desc:""}));C=n;saveC();ph=1;rsT=1;sview();rbuild();tab("p5");toast("Mes choix précédents sont repris : je peux les modifier")});
+ if($("ca"))$("ca").onclick=()=>guardSend(()=>sendPdf(carnetLines(),"stepxpt-carnet.pdf"));if($("cpf"))$("cpf").onclick=saveCarnet}
 function cmRender(){if(mode!=="all"&&!C.coach.plan[+mode])mode="all";
- $("cm").innerHTML='<button data-i="all" class="'+(mode==="all"?"on":"")+'">Toutes les séries</button>'+C.coach.plan.map((p,i)=>`<button data-m="${p.m.toLowerCase()}" data-i="${i}" class="${String(mode)===String(i)?"on":""}">Série ${i+1} · ${p.m}</button>`).join("");
- Q("#cm button").forEach(b=>b.onclick=()=>{mode=b.dataset.i==="all"?"all":+b.dataset.i;reset()})}
+ $("cm").innerHTML='<button data-i="all" class="'+(mode==="all"?"on":"")+'">Tout le plan</button>'+C.coach.plan.map((p,i)=>`<button data-m="${p.m.toLowerCase()}" data-i="${i}" class="${String(mode)===String(i)?"on":""}">${SL(i,C.coach.plan)}</button>`).join("");
+ Q("#cm button").forEach(b=>b.onclick=()=>{if(run){toast("Le chrono tourne : je le mets en pause ou à zéro avant de changer de mode");return}mode=b.dataset.i==="all"?"all":+b.dataset.i;reset()});$("cm").style.display=C.coach.plan.length<2?"none":"";if(C.coach.plan.length<2)mode="all"}
 const zt=sn=>{const q=C.plan[sn-1],m=q?mk(q.m):(sn===1?"chill":"turbo");return m==="chill"?[bpm(60),bpm(70)]:m==="combo"?[bpm(70),bpm(80)]:[bpm(80),bpm(100)]};
-const planTxt=p=>{if(typeof p.w!=="number")return p.w+", récupération "+p.r;const k=p.k||1,R=p.R||0,rr=k>1?" R="+String(R).replace(".",",")+"'":"",tail=p.g?", récupération "+String(p.g).replace(".",",")+" min":"";
+const fR=x=>{x=+x||0;const m=Math.floor(x),sc=Math.round((x-m)*60);return sc?m+"'"+String(sc).padStart(2,"0"):m+"'"},fM=x=>{x=+x||0;const m=Math.floor(x),sc=Math.round((x-m)*60);return sc?(m?m+" min ":"")+sc+(m?"":" s"):m+" min"};
+const planTxt=p=>{if(typeof p.w!=="number")return p.w+", récupération "+p.r;const k=p.k||1,R=p.R||0,rr=k>1?" R="+fR(R):"",tail=p.g?", récupération "+fM(p.g):"";
  const eff=p.m==="Turbo"?(k>1?k+"×("+p.n+"×"+p.w+"''/"+p.r+"'')":p.n+"×"+p.w+"''/"+p.r+"''"):(k>1?k+"×"+p.n+"'":p.n+" min");return eff+rr+tail}
 const totMin=P=>Math.round(P.reduce((t,p)=>{const k=p.k||1,R=+p.R||0,g=+p.g||0;const eff=p.m==="Turbo"?(p.n*(+p.w)+(p.n-1)*(+p.r))/60:+p.n;return t+k*eff+(k-1)*R+g},0));
 const verd=(sn,fc)=>{if(!(fc>0))return"";const[a,b]=zt(sn);return fc<a?"↓ "+(a-fc)+" bpm sous la cible":fc>b?"↑ "+(fc-b)+" bpm au-dessus de la cible":"✓ dans ma cible"};
@@ -696,10 +732,11 @@ const prm=st=>{if(!st.sn||isCoach())return"";const p=C.par[st.sn-1];if(!p)return
 const rbuild=()=>{cmRender();if(!run){build(mode);idx=0;left=0;show()}};
 const goPh=n=>{ph=n;sview()};
 let ftm=null;
-function fcPrompt(sn,last){$("fgo").classList.add("hl");toast("Série "+sn+" terminée : je lance les 15 s de FC de mon steppeur"+(last?". Ensuite, mes observations.":""))}
+function fcPrompt(sn,last){$("fgo").classList.add("hl");toast(SL(sn-1,C.coach.plan)+" terminé : je lance les 15 s de FC de mon steppeur"+(last?". Ensuite, mes observations.":""))}
 $("fgo").onclick=()=>{$("fgo").classList.remove("hl");if(ftm){clearInterval(ftm);ftm=null;$("fgo").textContent="Signaler les 15 s de FC";$("ft").textContent="15";return}
  const e=Date.now()+15000;beep(660,250);$("fgo").textContent="Arrêter";$("ft").textContent="15";
  ftm=setInterval(()=>{const l=Math.ceil((e-Date.now())/1000);$("ft").textContent=Math.max(l,0);if(l<=0){clearInterval(ftm);ftm=null;beep(880,600);$("fgo").textContent="Signaler les 15 s de FC"}},200)};
+document.addEventListener("visibilitychange",async()=>{if(document.visibilityState==="visible"&&run&&!wl){try{wl=await navigator.wakeLock.request("screen")}catch(e){}}});
 let dip=null;addEventListener("beforeinstallprompt",e=>{e.preventDefault();dip=e;$("ib").style.display="inline-block";setTimeout(ibShow,800)});addEventListener("appinstalled",()=>{$("ibub").hidden=true});
 $("ib").onclick=()=>{if(dip){dip.prompt();dip=null;$("ib").style.display="none"}};
 try{if(matchMedia("(display-mode: standalone)").matches||navigator.standalone)$("inst").style.display="none"}catch(e){}
@@ -744,7 +781,7 @@ function showProject(kind){const hb=$("hrt");Q(".orb").forEach(o=>o.classList.re
  let h=`<h3 style="color:#fff">${n?esc(n)+" · ":""}Mon projet de transformation</h3><p class="dim"><i>Je choisis ma direction, je conduis mon entraînement, j'apprends de mon expérience et je fais évoluer mon projet.</i></p>`;
  if(!n)h+='<div class="fr"><div class="f"><label>Prénom</label><input id="pj_pn" maxlength="40" style="font-size:18px"></div><div class="f"><label>Nom</label><input id="pj_nm" maxlength="40" style="font-size:18px"></div></div>';
  if(Sx.length)h+=`<div class="db"><div class="dh">Mes expériences Chill, Combo et Turbo</div><div class="dbb">${evid().map(t=>`<p style="margin:5px 0;font-size:12px">${esc(t)}</p>`).join("")}</div></div>`;
- h+=kind?pjForm(kind,c):pjView(c);
+ h+=kind?pjForm(kind,c):pjView(c);h+=modesHtml();
  const od=$("od");od.style.borderTop="4px solid #9DB5FF";od.innerHTML=h;bindPj(kind)}
 function bindPj(kind){
  const pn=$("pj_pn"),nm=$("pj_nm");if(pn){pn.oninput=e=>{S.pn=e.target.value;save();prof();refreshHrt()};nm.oninput=e=>{S.nm=e.target.value;save();prof();refreshHrt()}}
@@ -784,5 +821,50 @@ function ibShow(){let st=false;try{st=matchMedia("(display-mode: standalone)").m
 $("ibx").onclick=()=>{$("ibub").hidden=true;try{localStorage.setItem(ibK,String(Date.now()))}catch(e){}};
 $("ibi").onclick=async()=>{if(dip){dip.prompt();try{await dip.userChoice}catch(e){}dip=null;$("ibub").hidden=true}};
 setTimeout(ibShow,2500);
+
+/* ===== Parcours guidé ===== */
+const MT=["Chill","Combo","Turbo"],RTN=["Situer","Planifier","Piloter","Mesurer","Capitaliser"],RTT=["Je me situe","Je planifie mon entraînement","Je choisis mes paramètres","Je mesure les effets","Je capitalise"],RCN=["Préparer","Coacher","Bilan"],RCT=["Je prépare le plan de mon steppeur","Je coache","Je fais le bilan"];
+let rsT=1,rsC=1;
+function pickHtml(k){const co=k==="c",P=co?C.coach.plan:C.plan,ok=co?C.coach.picked:C.picked;
+ return `<div class="gdtiles">`+MT.map(n=>{const x=MODES.find(m=>m.n===n),i=ok?P.findIndex(p=>p.m===n):-1;return `<button type="button" class="gdtile${i>=0?" sel":""}" style="--c:${x.c};background:${MBG[mk(n)]}" data-tp="${k}.${n}"><span class="gdtt"><span class="gddot" style="background:${x.c}"></span>${n}${i>=0?`<span class="gdbg">${P.length>1?"Mode "+(i+1):"Choisi"}</span>`:""}</span><span class="gdts">${x.z} · ${x.ex}</span><span class="gdts">Effort ${x.nat}</span></button>`}).join("")+`</div><p class="dim">${!ok?(co?"Je touche le mode choisi par mon steppeur. Il peut en combiner deux.":"Je touche le mode que je choisis. Je peux en combiner deux."):P.length<2?"Je peux toucher un 2e mode pour le combiner.":"Je touche un mode choisi pour le retirer, ou un autre pour remplacer le 2e."}</p>`}
+function pickMode(k,m){const co=k==="c",P=co?C.coach.plan:C.plan,ok=co?C.coach.picked:C.picked,nm=()=>({h:"",imp:0,lest:"",bras:0,rec:[],pas:""});
+ const rmAt=i=>{P.splice(i,1);if(co)C.coach.obs.splice(i,1);else{C.par.splice(i,1);C.ent.splice(i,1)}};
+ const addP=()=>{const L=P[P.length-1];if(L&&!L.g)L.g=2;P.push(mkS(m,0));if(!co){C.par.push(nm());C.ent.push({fc:"",rpe:0,adj:"",desc:""})}};
+ Object.keys(EXP).forEach(x=>delete EXP[x]);
+ if(!ok){P.length=0;if(co)C.coach.obs.length=0;else{C.par.length=0;C.ent.length=0}P.push(mkS(m,0));if(!co){C.par.push(nm());C.ent.push({fc:"",rpe:0,adj:"",desc:""})}if(co)C.coach.picked=true;else C.picked=true}
+ else{const i=P.findIndex(p=>p.m===m);if(i>=0){if(P.length>1)rmAt(i)}else if(P.length<2)addP();else{rmAt(1);addP()}}
+ if(P.length===1)P[0].g=0;
+ if(co)clrCoop();else C.chk={};saveC();rbuild();cserRender();sview()}
+function railHtml(N,cur,k){return '<div class="gdrail">'+N.map((n,i)=>`<button type="button" data-rs="${k}.${i+1}" class="${i+1===cur?"on":i+1<cur?"done":""}" aria-label="${n}"><b>${i+1<cur?"✓":i+1}</b>${n}</button>`).join("")+'</div>'}
+function navHtml(k,cur,last){return `<div class="gdnav">${cur>1?`<button type="button" class="btn" data-rg="${k}.prev">Retour</button>`:""}${cur<last?`<button type="button" class="btn cta" data-rg="${k}.next">Continuer</button>`:""}</div>`}
+function railGo(k,n){
+ if(k==="t"){if(n>2&&!C.picked){toast("Je choisis d'abord mon mode d'entraînement");n=2}
+  if(n===5){const m=missEnt();if(m.length){showReq=true;n=4;toast("Pour faire le bilan, je remplis : "+m.slice(0,2).join(" et ")+(m.length>2?"…":""))}}
+  rsT=n;ph=n<=3?1:n-2}
+ else{if(n>1&&!C.coach.picked){toast("Je choisis d'abord le mode de mon steppeur");n=1}
+  if(n===3){const m=coachMiss();if(m.length){showReq=true;n=2;toast("Pour faire le bilan, je remplis : "+m.slice(0,2).join(" et ")+(m.length>2?"…":""))}}
+  rsC=n;ph=n<=1?0:n}
+ sview();scrollTo(0,0)}
+function guideRender(){const co=isCoach();
+ $("railT").innerHTML=railHtml(RTN,rsT,"t")+`<p class="gdstep">Étape ${rsT} sur 5</p><p class="gdtitle">${RTT[rsT-1]}</p>`+saveTip(rsT===5);
+ $("navT").innerHTML=navHtml("t",rsT,5);
+ $("railC").innerHTML=railHtml(RCN,rsC,"c")+`<p class="gdstep">Étape ${rsC} sur 3</p><p class="gdtitle">${RCT[rsC-1]}</p>`+saveTip(rsC===3);
+ $("navC").innerHTML=navHtml("c",rsC,3);
+ const ac=Q("#p4>.accw");if(ac.length)ac[0].style.display=rsC===1?"":"none";$("kpbody").hidden=false;
+ $("slotC").style.display=rsC>=2?"":"none";$("tocarnet").style.display=rsC===3?"":"none"}
+const saveTip=big=>`<div class="tip" style="margin:0 0 10px${big?";border-color:#FFCC00":""}"><span class="ti">!</span><div>${big?"<b>Dernière étape : j'enregistre mon entraînement avec « Enregistrer ma séance du jour ».</b> Sans enregistrement, il n'est ni conservé dans mon carnet, ni envoyé.":"Je pense à enregistrer mon entraînement à la fin du parcours : sans enregistrement, il n'est ni conservé ni envoyé."}</div></div>`;
+const _sv=sview;
+sview=function(){
+ if(!isCoach()){if(ph===0){ph=1;rsT=1}if(ph===2)rsT=4;else if(ph===3)rsT=5;else if(rsT>3||rsT<1)rsT=1;if(ph===1){EXP.st1=rsT===1;EXP.st2=rsT===2;EXP.st3=rsT===3}}
+ else{if(ph===1)ph=2;if(ph===2)rsC=2;else if(ph===3)rsC=3;else rsC=1}
+ _sv();guideRender()};
+document.addEventListener("click",e=>{const t=e.target.closest&&e.target.closest("[data-tp]");if(t){const[k,m]=t.dataset.tp.split(".");pickMode(k,m);return}
+ const r=e.target.closest&&e.target.closest("[data-rs]");if(r){const[k,n]=r.dataset.rs.split(".");railGo(k,+n);return}
+ const g=e.target.closest&&e.target.closest("[data-rg]");if(g){const[k,a]=g.dataset.rg.split("."),c=k==="t"?rsT:rsC;railGo(k,a==="next"?c+1:c-1);return}
+ const w=e.target.closest&&e.target.closest("[data-sw]");if(w)tab(w.dataset.sw)});
+{const cw=Q("#p4>.accw")[1];if(cw){$("p6box").appendChild(cw);cw.style.display=""}}
+$("p6edit").onclick=()=>{tab("p4");railGo("c",1)};
+guideRender();
+
 orbs(0);rview("chill");cmRender();build(mode);all();sview();lst();hist();prof();
 </script></body></html>
