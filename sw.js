@@ -1,6 +1,6 @@
 // StepXP (Terminales) - © Muriel Barreau, CEDREPS, 2026 - CC BY-NC 4.0
 // Pour forcer la mise à jour chez les élèves après une modification d'index.html : changer V (ex. "stepxpt-v2").
-const V="stepxpt-v1",F=["./","index.html","manifest.webmanifest","icon-192.png","icon-512.png","apple-touch-icon.png"];
+const V="stepxpt-v2",F=["./","index.html","manifest.webmanifest","icon-192.png","icon-512.png","apple-touch-icon.png"];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(V).then(c=>c.addAll(F)).then(()=>self.skipWaiting()))});
 // On ne supprime que les caches de StepXP Terminales : le stockage de cache est partagé avec les autres applis du même compte GitHub.
 self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(n=>n.startsWith("stepxpt-")&&n!==V).map(n=>caches.delete(n)))).then(()=>self.clients.claim()))});
